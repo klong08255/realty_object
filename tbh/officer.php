@@ -65,11 +65,6 @@
                             <div class="sb-nav-link-icon "><i class="fas fa-user-edit"></i></div>
                             จัดการข้อมูลผู้เช่า
                         </a>
-                        <a class="nav-link collapsed" href="officer.php?p=p5" data-target="#collapseLayouts"
-                            aria-expanded="false" aria-controls="collapseLayouts">
-                            <div class="sb-nav-link-icon "><i class="fas fa-file"></i></div>
-                            เอกสารอื่น ๆ
-                        </a>
                         <a class="nav-link collapsed" href="officer.php?p=adduser" data-target="#collapseLayouts"
                             aria-expanded="false" aria-controls="collapseLayouts">
                             <div class="sb-nav-link-icon "><i class="fas fa-user-plus"></i></div>
@@ -101,24 +96,8 @@
                         include_once('../work_off/news/editnews.php');
                     break;
                     }
-            //*ผู้เช่า
-                    case 'p7' :{
-                        include_once('../work_off/ten/manage_ten.php');
-                    break;
-                    }  
-                    case 'p8_add_ten' :{
-                        include_once('../work_off/ten/addten.php');
-                    break;
-                    }
-                    case 'p9_delete_ten' :{
-                        include_once('../work_off/ten/editten.php');
-                    break;
-                    }      
-            //*เอกสาร
-                    case 'p10' :{
-                        include_once('../');
-                    break;
-                    }          
+            //*เพิ่มผู้ใช้
+            
                     case 'adduser' :{
                         include_once('../work_off/adduser/addUser.php');
                     break;
