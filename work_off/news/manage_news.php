@@ -39,7 +39,7 @@
 
 <div class="card">
     <div class="card-header" id="bg_hd_card_m2">
-        <h3 class="text-center"><b> <i class="fas fa-table"></i> ตารางจัดการข่าวประชาสัมพันธ์</b></h3>
+        <h3 class="text-center"><b><i class="fas fa-table"></i> ตารางจัดการข่าวประชาสัมพันธ์</b></h3>
     </div>
     <div class="card-body bg-light">
                     <table class="table table-striped" id="myTable">
