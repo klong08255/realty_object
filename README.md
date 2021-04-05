@@ -1,1 +1,2 @@
 # realty_object
+จากบิลนะ
