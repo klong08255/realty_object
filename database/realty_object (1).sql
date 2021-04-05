@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 07, 2021 at 12:15 PM
+-- Generation Time: Apr 05, 2021 at 05:32 AM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.11
 
@@ -20,48 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `realty_object`
 --
-
--- --------------------------------------------------------
-
---
--- Table structure for table `manage_realty`
---
-
-CREATE TABLE `manage_realty` (
-  `id` int(5) NOT NULL,
-  `address` varchar(50) NOT NULL,
-  `num_layers` varchar(5) NOT NULL,
-  `num_booths` varchar(5) NOT NULL,
-  `width` varchar(10) NOT NULL,
-  `length` varchar(10) NOT NULL,
-  `store_name` varchar(30) NOT NULL,
-  `house_name` varchar(30) NOT NULL,
-  `rental_type` varchar(20) NOT NULL,
-  `ten_name` varchar(50) NOT NULL,
-  `rent` varchar(15) NOT NULL,
-  `rate_rent` varchar(10) NOT NULL,
-  `house_tax` varchar(10) NOT NULL,
-  `insurance` varchar(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `manage_ten`
---
-
-CREATE TABLE `manage_ten` (
-  `id` int(5) NOT NULL,
-  `first_name` varchar(30) NOT NULL,
-  `last_name` varchar(30) NOT NULL,
-  `id_number` varchar(13) NOT NULL,
-  `phone_number` varchar(10) NOT NULL,
-  `nationality_1` varchar(15) NOT NULL,
-  `nationality_2` varchar(15) NOT NULL,
-  `contract_date` varchar(20) NOT NULL,
-  `rental_type` varchar(20) NOT NULL,
-  `address_rental` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -87,6 +45,37 @@ INSERT INTO `news` (`id`, `news_title`, `news_summary`, `news_description`, `new
 (2, 'ด่วน! อาคารว่างมีจำนวนจำกัด', 'ด่วนมากกกกก', '-', 'เจ้าหน้าที่ ', '161009698567396.png', '2021-01-08 09:09:45'),
 (45, 'ข่าวด่วนที่สุด ! ', 'ด่วนจี๋', 'asdf', 'เจ้าหน้าที่ ', '161009693519696.png', '2021-01-08 09:08:55'),
 (46, 'คมชัดลึก', 'ลึกกว่าข่าว', 'นะจ้ะ', 'เจ้าหน้าที่ ', '161009692392195.png', '2021-01-08 09:08:43');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tenant_data`
+--
+
+CREATE TABLE `tenant_data` (
+  `id` int(10) NOT NULL,
+  `name` varchar(50) NOT NULL,
+  `id_person` int(13) NOT NULL,
+  `brithday` varchar(10) NOT NULL,
+  `age` int(2) NOT NULL,
+  `phone_number` int(10) NOT NULL,
+  `house_name` varchar(50) NOT NULL,
+  `num_layer` int(1) NOT NULL,
+  `num_booths` int(1) NOT NULL,
+  `width` int(2) NOT NULL,
+  `lenght` int(2) NOT NULL,
+  `rate` int(3) NOT NULL,
+  `address` varchar(50) NOT NULL,
+  `rent_per_month` int(10) NOT NULL,
+  `rent_per_year` int(10) NOT NULL,
+  `start_fire_ins` varchar(10) NOT NULL,
+  `fire_ins` varchar(10) NOT NULL,
+  `start_contract` int(10) NOT NULL,
+  `contract_fee` int(5) NOT NULL,
+  `date_pay_rent` varchar(10) NOT NULL,
+  `type_house` varchar(20) NOT NULL,
+  `id_address` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -121,21 +110,15 @@ INSERT INTO `user` (`id`, `username`, `password`, `title_name`, `first_name`, `l
 --
 
 --
--- Indexes for table `manage_realty`
---
-ALTER TABLE `manage_realty`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `manage_ten`
---
-ALTER TABLE `manage_ten`
-  ADD PRIMARY KEY (`id`);
-
---
 -- Indexes for table `news`
 --
 ALTER TABLE `news`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `tenant_data`
+--
+ALTER TABLE `tenant_data`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -149,22 +132,16 @@ ALTER TABLE `user`
 --
 
 --
--- AUTO_INCREMENT for table `manage_realty`
---
-ALTER TABLE `manage_realty`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `manage_ten`
---
-ALTER TABLE `manage_ten`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT;
-
---
 -- AUTO_INCREMENT for table `news`
 --
 ALTER TABLE `news`
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
+
+--
+-- AUTO_INCREMENT for table `tenant_data`
+--
+ALTER TABLE `tenant_data`
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `user`
