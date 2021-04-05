@@ -111,15 +111,14 @@
                     </li>
                     </ul>
     <!---------------------------------------- icon serach --------------------------------------------------->
-                <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2 text-dark" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit"><i class="fa fa-search"></i></button>
-                </form> 
+                
                     </div>
             </nav>
 
     <!---------------------------------------- ดึงหน้า --------------------------------------------------------->   
         <?php 
+            if(isset($_GET['p'])){
+
             switch ($_GET['p']){
                 case "home":
                     include_once('home.php');
@@ -145,6 +144,14 @@
                 break;
 
             }
+        }
+        if(!isset($_GET['p'])){
+            ?>
+                    <script>
+                        window.location.href='index.php?p=home';
+                    </script>
+        <?php
+        }
         ?>
     
 
@@ -152,6 +159,7 @@
         <div class="container-fluid mt-2 bg-warning">
             <div class="row">
                 <div class="col-sm-12 text-center">
+                    <img src="image/upload/logo_nsru.png" style="width:75px;" >
                     <img src="image/upload/it4cd.png" style="width:150px;" >
                         <b><br> ©2020 กลุ่มวิจัยด้านเทคโนโลยีสารสนเทษเพื่อการพัฒนาชุมชน (IT4CD)</b>
                         <br><b>มหาวิทยาลัยราชภัฏนครสวรรค์</b>
