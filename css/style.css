@@ -1,0 +1,53 @@
+
+body{
+    margin: 0px;
+}
+
+/* ส่วนหัวซ้าย */
+.header{
+    margin: 0px;
+    min-height: 50px;
+    width: 0 auto;
+}
+.header .h_left{
+    margin: 0px;
+    padding: 0px;
+    width: 50%;
+    min-height: 50px;
+    float: left;
+}
+.header .h_left img{
+    width: 100px;
+    height: 100px;
+    float: left;
+}
+.header .h_left .text_h{
+    width: 0 auto;
+    height: 100px;
+    float: left;
+    margin-left: 20px;
+
+}
+.header .h_left .text_h h2{
+    margin: 15px;
+    color: turquoise;
+} 
+/* ********************************************************** */
+
+/* ส่วนหัวขวา*/
+.header .h_right{
+    margin: 0px;
+    width: 50%;
+    min-height: 50px;
+    float: right;
+    
+}
+.header .h_right .cont_r{
+    margin: 0px;
+    width: 50%;
+    min-height: 50px;
+    float: right;
+}
+
+
+/* ********************************************************** */
