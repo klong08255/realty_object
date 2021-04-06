@@ -65,6 +65,11 @@
                             <div class="sb-nav-link-icon "><i class="fas fa-user-edit"></i></div>
                             จัดการข้อมูลผู้เช่า
                         </a>
+                        <a class="nav-link collapsed" href="officer.php?p=p4" data-target="#collapseLayouts"
+                            aria-expanded="false" aria-controls="collapseLayouts">
+                            <div class="sb-nav-link-icon "><i class="fas fa-user-edit"></i></div>
+                            จัดการผู้ใช้งาน
+                        </a>
                         <a class="nav-link collapsed" href="officer.php?p=adduser" data-target="#collapseLayouts"
                             aria-expanded="false" aria-controls="collapseLayouts">
                             <div class="sb-nav-link-icon "><i class="fas fa-user-plus"></i></div>
@@ -97,7 +102,10 @@
                     break;
                     }
             //*เพิ่มผู้ใช้
-            
+                    case 'p4' :{
+                        include_once('../work_off/adduser/manage_user.php');
+                    break;
+                    }
                     case 'adduser' :{
                         include_once('../work_off/adduser/addUser.php');
                     break;

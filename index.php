@@ -110,7 +110,7 @@
                         <a href="index.php?p=contact" class="ml-2 text-dark btn"><i class="fas fa-address-card"></i> ช่องทางการติดต่อ</a>
                     </li>
                     </ul>
-    <!---------------------------------------- icon serach --------------------------------------------------->
+    
                 
                     </div>
             </nav>
