@@ -21,7 +21,7 @@
                         if (mysqli_connect_errno()) {
                                 echo"เชื่อมต่อ Database ไม่สำเร็จ!";
                         }else{
-                        //? echo"เชื่อมต่อ Database สำเร็จแล้ว";
+                                // echo"เชื่อมต่อ Database สำเร็จแล้ว";
                         }
                         
                         }
@@ -132,6 +132,15 @@
                                 $re = mysqli_query($this->dbcon, "SELECT * FROM news ORDER BY id DESC");
                                 return $re;
                         }
+                }
+
+                class queryData extends DB_conn{
+                        public function runQuery($query){
+                                $re = mysqli_query($this->dbcon, $query);
+                               return $re;
+                        }
+                        
+
                 }
 
 
