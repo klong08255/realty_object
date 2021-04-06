@@ -60,7 +60,7 @@
                     <div class="nav">
                         <a class="nav-link collapsed" href="officer.php?p=showMember" data-target="#collapseLayouts"
                             aria-expanded="false" aria-controls="collapseLayouts">
-                            <div class="sb-nav-link-icon "><i class="fas fa-user-plus"></i></div>
+                            <div class="sb-nav-link-icon "><i class="fas fa-user-cog"></i></div>
                             จัดการผู้ใช้งาน
                         </a>
                         <a class="nav-link collapsed" href="officer.php?p=p1" data-target="#collapseLayouts"
