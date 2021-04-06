@@ -27,7 +27,7 @@
                     <div class="row p-2">
     <!---------------------------------------- logo ---------------------------------------------------------->
                         <div class="col-sm-1 col-xs d-flex align-items-center ">
-                            <img src="image/upload/logowat.png" class="w-100">
+                            <img src="image/upload/logowat.png" class="w-100 d-none d-xl-block">
                         </div>
     <!---------------------------------------- ชื่อระบบ -------------------------------------------------------->
                         <div class="col-sm text-black mt-4">

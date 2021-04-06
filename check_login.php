@@ -67,7 +67,7 @@
                         },
                         function(isConfirm){
                         if (isConfirm) {
-                            window.location.href = 'tbh/officer.php?p=p1';
+                            window.location.href = 'tbh/officer.php?p=showMember';
                         }
                         }); }, 1000);";
                 echo"</script>";

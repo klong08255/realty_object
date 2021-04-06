@@ -2,6 +2,9 @@
     session_start();
     require_once('../function.php');
     $connect_database = new DB_conn();  
+
+    if(isset($_SESSION['id'])){
+   
 ?>
 
 <!DOCTYPE html>
@@ -44,7 +47,7 @@
 
         <!--------------------------------------- logout -------------------------------------------------->
         <div class="text-light">
-            <i class="fa fa-circle text-success"></i> ยินดีต้อนรับ, คุณ : <?php echo $_SESSION['user_level']; ?>
+            <i class="fa fa-circle text-success"></i> ยินดีต้อนรับ, คุณ : <?php echo $_SESSION['name']; ?>
             <a href="../check_logout.php?logout"><button class="btn btn-danger ml-2">ออกจากระบบ <i
                         class="fa fa-sign-out-alt"></i></button></a>
         </div>
@@ -55,6 +58,11 @@
             <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
                 <div class="sb-sidenav-menu">
                     <div class="nav">
+                        <a class="nav-link collapsed" href="officer.php?p=showMember" data-target="#collapseLayouts"
+                            aria-expanded="false" aria-controls="collapseLayouts">
+                            <div class="sb-nav-link-icon "><i class="fas fa-user-plus"></i></div>
+                            จัดการผู้ใช้งาน
+                        </a>
                         <a class="nav-link collapsed" href="officer.php?p=p1" data-target="#collapseLayouts"
                             aria-expanded="false" aria-controls="collapseLayouts">
                             <div class="sb-nav-link-icon "><i class="fas fa-newspaper"></i></div>
@@ -64,11 +72,6 @@
                             aria-expanded="false" aria-controls="collapseLayouts">
                             <div class="sb-nav-link-icon "><i class="fas fa-user-edit"></i></div>
                             จัดการข้อมูลผู้เช่า
-                        </a>
-                        <a class="nav-link collapsed" href="officer.php?p=adduser" data-target="#collapseLayouts"
-                            aria-expanded="false" aria-controls="collapseLayouts">
-                            <div class="sb-nav-link-icon "><i class="fas fa-user-plus"></i></div>
-                            เพิ่มผู้ใช้งาน
                         </a>
                     </div>
                 </div>
@@ -102,6 +105,10 @@
                         include_once('../work_off/adduser/addUser.php');
                     break;
                     }          
+                    case 'showMember' :{
+                        include_once('../work_off/adduser/showMember.php');
+                    break;
+                    }          
                 }
             ?>
                 </div>
@@ -123,3 +130,12 @@
 </body>
 
 </html>
+
+<?php
+    }
+    if(!isset($_SESSION['id'])){
+        header("Location: ../index.php?p=home");
+
+    }
+    ?>
+
