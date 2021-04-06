@@ -62,7 +62,7 @@
 
 ?>
 
-<a href="officer.php?p=p1"><button class="btn btn-success mb-2 "><i class="fas fa-arrow-circle-left"></i> ย้อนกลับ</button></a>
+<a href="officer.php?p=p1"><button class="btn btn-primary mb-2 "><i class="fas fa-arrow-circle-left"></i> ย้อนกลับ</button></a>
 
 <div class="card">
     <div class="card-header text-center" id="bg_hd_card_m2">

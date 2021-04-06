@@ -100,7 +100,7 @@
 <a href="officer.php?p=p1"><button class="btn btn-primary mb-2 "><i class="fas fa-arrow-circle-left"></i> ย้อนกลับ</button></a>
 
 <div class="card">
-    <div class="card-header text-center bg-warning">
+    <div class="card-header text-center">
         <h3> <b><i class="far fa-newspaper text-success"></i> แก้ไขข่าวประชาสัมพันธ์</b></h3>
     </div>
     <div class="card-body">

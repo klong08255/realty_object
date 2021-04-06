@@ -1,10 +1,10 @@
-<div class="d-flex justify-content-start mb-2"><a href="officer.php?p=showMember" class = "btn btn-primary">ย้อนกลับ <</a></div>
+<div class="d-flex justify-content-start mb-2"><a href="officer.php?p=showMember" class = "btn btn-primary"><i class="fas fa-arrow-circle-left"></i> ย้อนกลับ</a></div>
 
         <?php
             if(!isset($_GET['id4edit'])){
         ?>
         <div class="card">
-            <div class="card-header text-center alert alert-primary">
+            <div class="card-header text-center">
                 <h3 class="font-weight-bold"><i class="fas fa-user-plus"></i> เพิ่มผู้ใช้งาน</h3>
             </div>
             <div class="card-body"> 
@@ -46,7 +46,7 @@
                     <div class="form-group col-md-4">
                     <label for="inputState">สถานะ</label>
                     <select id="inputState" class="form-control" name="user_level" required>
-                    <option value="แอดมิน">แอดมิน</option>
+                        <option value="แอดมิน">แอดมิน</option>
                         <option value="เจ้าหน้าที่">เจ้าหน้าที่</option>
                         <option value="ผู้บริหาร">ผู้บริหาร</option>
                     </select>
@@ -83,8 +83,8 @@
                         $fetch = mysqli_fetch_array($sql);
                         ?>
         <div class="card">
-            <div class="card-header text-center alert alert-warning">
-                <h3 class="font-weight-bold"><i class="fas fa-user-edit"></i> แก้ไขผู้ใช้งาน</h3>
+            <div class="card-header text-center">
+                <h3 class="font-weight-bold text-center"><i class="fas fa-user-edit text-success"></i> แก้ไขผู้ใช้งาน</h3>
             </div>
             <div class="card-body"> 
         
@@ -92,40 +92,40 @@
                 <div class="form-row">
                     <div class="form-group col-md-6">
                     <label>Username</label>
-                    <input type="text" class="form-control" id="inputUsername" name="id" value="<?php echo $fetch['id'];?>" hidden>
-                    <input type="text" class="form-control" id="inputUsername" name="username" value="<?php echo $fetch['username'];?>">
+                    <input type="text" class="form-control border border-success" id="inputUsername" name="id" value="<?php echo $fetch['id'];?>" hidden>
+                    <input type="text" class="form-control border border-success" id="inputUsername" name="username" value="<?php echo $fetch['username'];?>">
                     </div>
                     <div class="form-group col-md-6">
                     <label>Password</label>
-                    <input type="text" class="form-control" id="inputPassword" name="password" value="<?php echo $fetch['password'];?>">
+                    <input type="text" class="form-control border border-success" id="inputPassword" name="password" value="<?php echo $fetch['password'];?>">
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="form-group col-md-2">
                     <label>คำนำหน้า</label>
-                    <input type="text" class="form-control" id="inputUsername" name="title_name"  value="<?php echo $fetch['title_name'];?>">
+                    <input type="text" class="form-control border border-success" id="inputUsername" name="title_name"  value="<?php echo $fetch['title_name'];?>">
                     </div>
                     <div class="form-group col-md-5">
                     <label>ชื่อ</label>
-                    <input type="text" class="form-control" id="inputName" name="first_name" value="<?php echo $fetch['first_name'];?>">
+                    <input type="text" class="form-control border border-success" id="inputName" name="first_name" value="<?php echo $fetch['first_name'];?>">
                     </div>
                     <div class="form-group col-md-5">
                     <label>นามสกุล</label>
-                    <input type="text" class="form-control" id="inputLastname" name="last_name"  value="<?php echo $fetch['last_name'];?>">
+                    <input type="text" class="form-control border border-success" id="inputLastname" name="last_name"  value="<?php echo $fetch['last_name'];?>">
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="form-group col-md-4">
                     <label for="inputCity">E-mail</label>
-                    <input type="email" class="form-control" id="inputEmail" name="email" value="<?php echo $fetch['email'];?>">
+                    <input type="email" class="form-control border border-success" id="inputEmail" name="email" value="<?php echo $fetch['email'];?>">
                     </div>
                     <div class="form-group col-md-4">
                     <label for="inputCity">เบอร์โทรติดต่อ</label>
-                    <input type="text" class="form-control" id="inputUserlevel" name="phone_number" value="<?php echo $fetch['phone_number'];?>" maxlength="10">
+                    <input type="text" class="form-control border border-success" id="inputUserlevel" name="phone_number" value="<?php echo $fetch['phone_number'];?>" maxlength="10">
                     </div>
                     <div class="form-group col-md-4">
                     <label for="inputState">สถานะ</label>
-                    <select id="inputState" class="form-control" name="user_level" required>
+                    <select id="inputState" class="form-control border border-success" name="user_level" required>
                         <option selected value="<?php echo $fetch['user_level'];?>"><?php echo $fetch['user_level'];?></option>
                         <option value="แอดมิน">แอดมิน</option>
                         <option value="เจ้าหน้าที่">เจ้าหน้าที่</option>
