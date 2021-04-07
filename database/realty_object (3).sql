@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 07, 2021 at 06:46 AM
+-- Generation Time: Apr 07, 2021 at 01:40 PM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.11
 
@@ -20,6 +20,33 @@ SET time_zone = "+00:00";
 --
 -- Database: `realty_object`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `data_build`
+--
+
+CREATE TABLE `data_build` (
+  `id` int(5) NOT NULL COMMENT 'ลำดับที่',
+  `build_address` varchar(100) NOT NULL COMMENT 'ที่อยู่ของอาคาร',
+  `rent_month` int(5) NOT NULL COMMENT 'ค่าเช่า/เดือน',
+  `rent_year` varchar(5) NOT NULL COMMENT 'ค่าเช่า/ปี',
+  `rent_deposit` varchar(5) NOT NULL COMMENT 'เงินประกันการเช่า',
+  `regis_fee` varchar(5) NOT NULL COMMENT 'ค่าบำรุงการจดทะเบียน',
+  `width` varchar(5) NOT NULL COMMENT 'ความกว้าง',
+  `lenght` varchar(5) NOT NULL COMMENT 'ความยาว',
+  `numb_layer` varchar(5) NOT NULL COMMENT 'จำนวนชั้น',
+  `numb_row` varchar(5) NOT NULL COMMENT 'จำนวนคูหา',
+  `type` varchar(20) NOT NULL COMMENT 'ประเภท(อาศัย/ร้านค้า)',
+  `use_area` varchar(5) NOT NULL COMMENT 'พื้นที่ใช้สอย',
+  `rate` varchar(5) NOT NULL COMMENT 'เรตค่าเช่า',
+  `land_tax` varchar(5) NOT NULL COMMENT 'ภาษีที่ดิน/ปี',
+  `contract_fee` varchar(5) NOT NULL COMMENT 'ค่าธรรมเนียมสัญญา',
+  `contract_fee2` varchar(5) NOT NULL COMMENT 'ค่าทำสัญญา',
+  `number_insurance` varchar(30) NOT NULL COMMENT 'เลขประกันภัย',
+  `date_insurance` varchar(30) NOT NULL COMMENT 'วันที่เริ่มประกัน'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -45,37 +72,6 @@ INSERT INTO `news` (`id`, `news_title`, `news_summary`, `news_description`, `new
 (2, 'ด่วน! อาคารว่างมีจำนวนจำกัด', 'ด่วนมากกกกก', '-', 'เจ้าหน้าที่ ', '161009698567396.png', '2021-01-08 09:09:45'),
 (45, 'ข่าวด่วนที่สุด ! ', 'ด่วนจี๋', 'asdf', 'เจ้าหน้าที่ ', '161009693519696.png', '2021-01-08 09:08:55'),
 (46, 'คมชัดลึก', 'ลึกกว่าข่าว', 'นะจ้ะ', 'เจ้าหน้าที่ ', '161009692392195.png', '2021-01-08 09:08:43');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `tenant_data`
---
-
-CREATE TABLE `tenant_data` (
-  `id` int(10) NOT NULL COMMENT 'ลำดับที่',
-  `name` varchar(50) NOT NULL COMMENT 'ชื่อ-นามสกุล',
-  `id_person` int(13) NOT NULL COMMENT 'เลขบัตร ปปช.',
-  `brithday` varchar(10) NOT NULL COMMENT 'วันเกิด',
-  `age` int(2) NOT NULL COMMENT 'อายุ',
-  `phone_number` int(10) NOT NULL COMMENT 'โทรศัพท์',
-  `house_name` varchar(50) NOT NULL COMMENT 'ชื่อร้านค้า/บ้าน',
-  `num_layer` int(1) NOT NULL COMMENT 'จำนวนชั้น',
-  `num_booths` int(1) NOT NULL COMMENT 'จำนวนคูหา',
-  `width` int(2) NOT NULL COMMENT 'ความกว้าง(เมตร)',
-  `lenght` int(2) NOT NULL COMMENT 'ความยาว(เมตร)',
-  `rate` int(3) NOT NULL COMMENT 'เรตเช่า',
-  `address` varchar(50) NOT NULL COMMENT 'บ้านเลขที่ที่เช่า',
-  `rent_per_month` int(10) NOT NULL COMMENT 'ค่าเช่า/เดือน',
-  `rent_per_year` int(10) NOT NULL COMMENT 'ค่าเช่า/ปี',
-  `start_fire_ins` varchar(10) NOT NULL COMMENT 'วันเริ่มทำประกัน',
-  `fire_ins` varchar(10) NOT NULL COMMENT 'ค่าประกันอัคคีภัย',
-  `start_contract` int(10) NOT NULL COMMENT 'วันเริ่มทำสัญญา',
-  `contract_fee` int(5) NOT NULL COMMENT 'ค่าทำสัญญา',
-  `date_pay_rent` varchar(10) NOT NULL COMMENT 'วันที่ต้องชำระค่าเช่า',
-  `type_house` varchar(20) NOT NULL COMMENT 'ประเภท(อยู่อาศัย-ร้านค้า)',
-  `id_address` varchar(50) NOT NULL COMMENT 'บ้านเลขที่ตามบัตร ปปช.'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -112,15 +108,15 @@ INSERT INTO `user` (`id`, `username`, `password`, `title_name`, `first_name`, `l
 --
 
 --
--- Indexes for table `news`
+-- Indexes for table `data_build`
 --
-ALTER TABLE `news`
+ALTER TABLE `data_build`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tenant_data`
+-- Indexes for table `news`
 --
-ALTER TABLE `tenant_data`
+ALTER TABLE `news`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -134,16 +130,16 @@ ALTER TABLE `user`
 --
 
 --
+-- AUTO_INCREMENT for table `data_build`
+--
+ALTER TABLE `data_build`
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT COMMENT 'ลำดับที่';
+
+--
 -- AUTO_INCREMENT for table `news`
 --
 ALTER TABLE `news`
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
-
---
--- AUTO_INCREMENT for table `tenant_data`
---
-ALTER TABLE `tenant_data`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT 'ลำดับที่';
 
 --
 -- AUTO_INCREMENT for table `user`
