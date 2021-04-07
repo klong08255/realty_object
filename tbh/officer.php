@@ -21,9 +21,10 @@
     <link rel="stylesheet" href="css/font.css">
     <link rel="stylesheet" href="css/style.css">
     <link href="css/styles.css" rel="stylesheet" />
-    
+
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 
     <link href="https://fonts.googleapis.com/css2?family=Mitr:wght@300&display=swap" rel="stylesheet">
     <!--- font --->
@@ -68,10 +69,10 @@
                             <div class="sb-nav-link-icon "><i class="fas fa-newspaper"></i></div>
                             จัดการข่าว
                         </a>
-                        <a class="nav-link collapsed" href="officer.php?p=p3" data-target="#collapseLayouts"
+                        <a class="nav-link collapsed" href="officer.php?p=rent" data-target="#collapseLayouts"
                             aria-expanded="false" aria-controls="collapseLayouts">
                             <div class="sb-nav-link-icon "><i class="fas fa-user-edit"></i></div>
-                            จัดการข้อมูลผู้เช่า
+                            จัดการข้อมูลการเช่าอสังหาริมทรัพย์
                         </a>
                     </div>
                 </div>
@@ -111,7 +112,13 @@
                     case 'showMember' :{
                         include_once('../work_off/adduser/showMember.php');
                     break;
-                    }          
+                    }   
+            //*เช่า
+                    case 'rent' :{
+                        include_once('../work_off/rent/rent.php');
+                    break;
+                    }
+            
                 }
             ?>
                 </div>
@@ -141,4 +148,3 @@
 
     }
     ?>
-
