@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 06, 2021 at 11:35 AM
+-- Generation Time: Apr 07, 2021 at 06:46 AM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.11
 
@@ -53,28 +53,28 @@ INSERT INTO `news` (`id`, `news_title`, `news_summary`, `news_description`, `new
 --
 
 CREATE TABLE `tenant_data` (
-  `id` int(10) NOT NULL,
-  `name` varchar(50) NOT NULL,
-  `id_person` int(13) NOT NULL,
-  `brithday` varchar(10) NOT NULL,
-  `age` int(2) NOT NULL,
-  `phone_number` int(10) NOT NULL,
-  `house_name` varchar(50) NOT NULL,
-  `num_layer` int(1) NOT NULL,
-  `num_booths` int(1) NOT NULL,
-  `width` int(2) NOT NULL,
-  `lenght` int(2) NOT NULL,
-  `rate` int(3) NOT NULL,
-  `address` varchar(50) NOT NULL,
-  `rent_per_month` int(10) NOT NULL,
-  `rent_per_year` int(10) NOT NULL,
-  `start_fire_ins` varchar(10) NOT NULL,
-  `fire_ins` varchar(10) NOT NULL,
-  `start_contract` int(10) NOT NULL,
-  `contract_fee` int(5) NOT NULL,
-  `date_pay_rent` varchar(10) NOT NULL,
-  `type_house` varchar(20) NOT NULL,
-  `id_address` varchar(50) NOT NULL
+  `id` int(10) NOT NULL COMMENT 'ลำดับที่',
+  `name` varchar(50) NOT NULL COMMENT 'ชื่อ-นามสกุล',
+  `id_person` int(13) NOT NULL COMMENT 'เลขบัตร ปปช.',
+  `brithday` varchar(10) NOT NULL COMMENT 'วันเกิด',
+  `age` int(2) NOT NULL COMMENT 'อายุ',
+  `phone_number` int(10) NOT NULL COMMENT 'โทรศัพท์',
+  `house_name` varchar(50) NOT NULL COMMENT 'ชื่อร้านค้า/บ้าน',
+  `num_layer` int(1) NOT NULL COMMENT 'จำนวนชั้น',
+  `num_booths` int(1) NOT NULL COMMENT 'จำนวนคูหา',
+  `width` int(2) NOT NULL COMMENT 'ความกว้าง(เมตร)',
+  `lenght` int(2) NOT NULL COMMENT 'ความยาว(เมตร)',
+  `rate` int(3) NOT NULL COMMENT 'เรตเช่า',
+  `address` varchar(50) NOT NULL COMMENT 'บ้านเลขที่ที่เช่า',
+  `rent_per_month` int(10) NOT NULL COMMENT 'ค่าเช่า/เดือน',
+  `rent_per_year` int(10) NOT NULL COMMENT 'ค่าเช่า/ปี',
+  `start_fire_ins` varchar(10) NOT NULL COMMENT 'วันเริ่มทำประกัน',
+  `fire_ins` varchar(10) NOT NULL COMMENT 'ค่าประกันอัคคีภัย',
+  `start_contract` int(10) NOT NULL COMMENT 'วันเริ่มทำสัญญา',
+  `contract_fee` int(5) NOT NULL COMMENT 'ค่าทำสัญญา',
+  `date_pay_rent` varchar(10) NOT NULL COMMENT 'วันที่ต้องชำระค่าเช่า',
+  `type_house` varchar(20) NOT NULL COMMENT 'ประเภท(อยู่อาศัย-ร้านค้า)',
+  `id_address` varchar(50) NOT NULL COMMENT 'บ้านเลขที่ตามบัตร ปปช.'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -103,8 +103,9 @@ CREATE TABLE `user` (
 INSERT INTO `user` (`id`, `username`, `password`, `title_name`, `first_name`, `last_name`, `email`, `phone_number`, `user_level`, `date_login`) VALUES
 (1, 'admin', '1234', 'นาย', 'แอดมิน', 'แอดมิน', 'q3.hahaha@gmail.com', '0899999999', 'แอดมิน', '2021-04-06 08:32:35'),
 (2, 'manager', '1234', 'นาย', 'ผู้บริหาร', 'ผู้บริหาร', 'q3.hahaha@gmail.com', '0899999999', 'ผู้บริหาร', '2021-04-06 08:42:08'),
-(3, 'officer', '1234', 'นาย', 'เจ้าหน้าที่', 'เจ้าหน้าที่', 'q3.hahaha@gmail.com', '0899999999', 'แอดมิน', '2021-04-06 08:42:34'),
-(14, 'bill', '1234', 'นาย', 'jirapat', 'meedoung', 'q3.hahaha@gmail.com', '0899999999', 'เจ้าหน้าที่', '2021-04-06 09:26:05');
+(14, 'bill', '895623', 'นาย', 'jirapat', 'meedoung', 'q3.hahaha@gmail.com', '0899999999', 'เจ้าหน้าที่', '2021-04-06 10:07:49'),
+(16, 'klong08255', '3369', 'นาย', 'นายนพเก้า', 'ถึงถาวร', 'noppakao.t@nsru.ac.th', '0644060454', 'เจ้าหน้าที่', '2021-04-06 10:07:14'),
+(17, '60113602014', 'noppakao99', 'นาย', 'noppakao', 'tungtaworn', 'klong_cap@hotmail.com', '0644060454', 'เจ้าหน้าที่', '2021-04-06 10:08:28');
 
 --
 -- Indexes for dumped tables
@@ -142,13 +143,13 @@ ALTER TABLE `news`
 -- AUTO_INCREMENT for table `tenant_data`
 --
 ALTER TABLE `tenant_data`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT COMMENT 'ลำดับที่';
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
