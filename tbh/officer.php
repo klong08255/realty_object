@@ -69,7 +69,7 @@
                             <div class="sb-nav-link-icon "><i class="fas fa-newspaper"></i></div>
                             จัดการข่าว
                         </a>
-                        <a class="nav-link collapsed" href="officer.php?p=rent" data-target="#collapseLayouts"
+                        <a class="nav-link collapsed" href="officer.php?p=data_build" data-target="#collapseLayouts"
                             aria-expanded="false" aria-controls="collapseLayouts">
                             <div class="sb-nav-link-icon "><i class="fas fa-user-edit"></i></div>
                             จัดการข้อมูลการเช่าอสังหาริมทรัพย์
@@ -114,8 +114,8 @@
                     break;
                     }   
             //*เช่า
-                    case 'rent' :{
-                        include_once('../work_off/rent/rent.php');
+                    case 'data_build' :{
+                        include_once('../work_off/data_build/show_data.php');
                     break;
                     }
             
