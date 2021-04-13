@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.3
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 07, 2021 at 01:40 PM
+-- Generation Time: Apr 13, 2021 at 11:59 AM
 -- Server version: 10.4.14-MariaDB
--- PHP Version: 7.4.11
+-- PHP Version: 7.4.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -31,21 +31,22 @@ CREATE TABLE `data_build` (
   `id` int(5) NOT NULL COMMENT 'ลำดับที่',
   `build_address` varchar(100) NOT NULL COMMENT 'ที่อยู่ของอาคาร',
   `rent_month` int(5) NOT NULL COMMENT 'ค่าเช่า/เดือน',
-  `rent_year` varchar(5) NOT NULL COMMENT 'ค่าเช่า/ปี',
-  `rent_deposit` varchar(5) NOT NULL COMMENT 'เงินประกันการเช่า',
-  `regis_fee` varchar(5) NOT NULL COMMENT 'ค่าบำรุงการจดทะเบียน',
-  `width` varchar(5) NOT NULL COMMENT 'ความกว้าง',
-  `lenght` varchar(5) NOT NULL COMMENT 'ความยาว',
-  `numb_layer` varchar(5) NOT NULL COMMENT 'จำนวนชั้น',
-  `numb_row` varchar(5) NOT NULL COMMENT 'จำนวนคูหา',
+  `rent_year` int(50) NOT NULL COMMENT 'ค่าเช่า/ปี',
+  `rent_deposit` int(50) NOT NULL COMMENT 'เงินประกันการเช่า',
+  `regis_fee` int(50) NOT NULL COMMENT 'ค่าบำรุงการจดทะเบียน',
+  `width` int(50) NOT NULL COMMENT 'ความกว้าง',
+  `lenght` int(50) NOT NULL COMMENT 'ความยาว',
+  `numb_layer` int(50) NOT NULL COMMENT 'จำนวนชั้น',
+  `numb_row` int(50) NOT NULL COMMENT 'จำนวนคูหา',
   `type` varchar(20) NOT NULL COMMENT 'ประเภท(อาศัย/ร้านค้า)',
   `use_area` varchar(5) NOT NULL COMMENT 'พื้นที่ใช้สอย',
-  `rate` varchar(5) NOT NULL COMMENT 'เรตค่าเช่า',
-  `land_tax` varchar(5) NOT NULL COMMENT 'ภาษีที่ดิน/ปี',
-  `contract_fee` varchar(5) NOT NULL COMMENT 'ค่าธรรมเนียมสัญญา',
-  `contract_fee2` varchar(5) NOT NULL COMMENT 'ค่าทำสัญญา',
+  `rate` int(50) NOT NULL COMMENT 'เรตค่าเช่า',
+  `land_tax` int(50) NOT NULL COMMENT 'ภาษีที่ดิน/ปี',
+  `contract_fee` int(50) NOT NULL COMMENT 'ค่าธรรมเนียมสัญญา',
+  `contract_fee2` int(50) NOT NULL COMMENT 'ค่าทำสัญญา',
   `number_insurance` varchar(30) NOT NULL COMMENT 'เลขประกันภัย',
-  `date_insurance` varchar(30) NOT NULL COMMENT 'วันที่เริ่มประกัน'
+  `date_insurance` date NOT NULL COMMENT 'วันที่เริ่มประกัน',
+  `date_insurance_stop` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -99,7 +100,7 @@ CREATE TABLE `user` (
 INSERT INTO `user` (`id`, `username`, `password`, `title_name`, `first_name`, `last_name`, `email`, `phone_number`, `user_level`, `date_login`) VALUES
 (1, 'admin', '1234', 'นาย', 'แอดมิน', 'แอดมิน', 'q3.hahaha@gmail.com', '0899999999', 'แอดมิน', '2021-04-06 08:32:35'),
 (2, 'manager', '1234', 'นาย', 'ผู้บริหาร', 'ผู้บริหาร', 'q3.hahaha@gmail.com', '0899999999', 'ผู้บริหาร', '2021-04-06 08:42:08'),
-(14, 'bill', '895623', 'นาย', 'jirapat', 'meedoung', 'q3.hahaha@gmail.com', '0899999999', 'เจ้าหน้าที่', '2021-04-06 10:07:49'),
+(14, 'bill', '1234', 'นาย', 'jirapat', 'meedoung', 'q3.hahaha@gmail.com', '0899999999', 'เจ้าหน้าที่', '2021-04-13 04:39:23'),
 (16, 'klong08255', '3369', 'นาย', 'นายนพเก้า', 'ถึงถาวร', 'noppakao.t@nsru.ac.th', '0644060454', 'เจ้าหน้าที่', '2021-04-06 10:07:14'),
 (17, '60113602014', 'noppakao99', 'นาย', 'noppakao', 'tungtaworn', 'klong_cap@hotmail.com', '0644060454', 'เจ้าหน้าที่', '2021-04-06 10:08:28');
 

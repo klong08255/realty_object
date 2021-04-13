@@ -78,14 +78,7 @@
             <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
 
-            <!-- function Data table-->
-            <script>
-            $(document).ready(function() {
-                $('#myTable').DataTable({
-                    "scrollX": true
-                });
-            });
-            </script>
+            
 
 
             <?php

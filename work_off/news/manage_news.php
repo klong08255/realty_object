@@ -42,7 +42,7 @@
         <h3 class="text-center"><b><i class="fas fa-table"></i> ตารางจัดการข่าวประชาสัมพันธ์</b></h3>
     </div>
     <div class="card-body bg-light">
-                    <table class="table table-striped" id="myTable">
+                    <table class="table table-striped w-100" id="myTable">
                 <thead>
                     <tr id="bg_hd_table_m">
                     <th scope="col">ลำดับ</th>
@@ -90,12 +90,5 @@
     </div>
 </div>
 
-<!-- function Data table-->
-<script>
-        $(document).ready( function () {
-            $('#myTable').DataTable();
-        } );
-
-</script>
 
 
