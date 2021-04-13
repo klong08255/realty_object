@@ -71,7 +71,7 @@
                         </a>
                         <a class="nav-link collapsed" href="officer.php?p=data_build" data-target="#collapseLayouts"
                             aria-expanded="false" aria-controls="collapseLayouts">
-                            <div class="sb-nav-link-icon "><i class="fas fa-user-edit"></i></div>
+                            <div class="sb-nav-link-icon "><i class="fas fa-folder"></i></div>
                             จัดการข้อมูลอาคารอสังหาริมทรัพย์
                         </a>
                     </div>
