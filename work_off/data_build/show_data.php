@@ -11,14 +11,62 @@
                     <h3 class="font-weight-bold text-center"><b><i class="fas fa-table"></i> ตารางจัดการข้อมูลอาคารอสังหาริมทรัพย์</b></h3>
                 </div>
                 <div class="card-body">
-                    <table class="table table-striped w-100" id="myTable">
+                    <table class="table table-striped min-vw-100" id="myTable">
                         <thead class="text-center">
                             <tr id="bg_hd_table_m">
                                     <th>
-                                        asfasf
+                                        ##
                                     </th>
                                     <th>
-                                        asfasf
+                                        ที่อยู่ของอาคาร
+                                    </th>
+                                    <th>
+                                        ค่าเช่า/เดือน
+                                    </th>
+                                    <th>
+                                        ค่าเช่า/ปี
+                                    </th>
+                                    <th>
+                                        เงินประกันการเช่า
+                                    </th>
+                                    <th>
+                                        ค่าบำรุงการจดทะเบียน	
+                                    </th>
+                                    <th>
+                                        ความกว้าง
+                                    </th>
+                                    <th>
+                                        ความยาว
+                                    </th>
+                                    <th>
+                                        จำนวนชั้น
+                                    </th>
+                                    <th>
+                                        จำนวนคูหา
+                                    </th>
+                                    <th>
+                                        ประเภท(อาศัย/ร้านค้า)	
+                                    </th>
+                                    <th>
+                                        พื้นที่ใช้สอย
+                                    </th>
+                                    <th>
+                                        เรตค่าเช่า
+                                    </th>
+                                    <th>
+                                        ภาษีที่ดิน/ปี
+                                    </th>
+                                    <th>
+                                        ค่าธรรมเนียมสัญญา
+                                    </th>
+                                    <th>
+                                        ค่าทำสัญญา
+                                    </th>
+                                    <th>
+                                        เลขประกันภัย
+                                    </th>
+                                    <th>
+                                        วันที่เริ่มประกัน
                                     </th>
                             </tr>
                         </thead>
