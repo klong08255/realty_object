@@ -11,11 +11,12 @@
                     <h3 class="font-weight-bold text-center"><b><i class="fas fa-table"></i> ตารางจัดการข้อมูลอาคารอสังหาริมทรัพย์</b></h3>
                 </div>
                 <div class="card-body">
-                    <table class="table table-striped min-vw-100" id="myTable">
-                        <thead class="text-center">
+                <div class="table-responsive">
+                    <table class="table table-striped w-100" id="myTable">
+                        <thead class="text-center alert alert-success">
                             <tr id="bg_hd_table_m">
                                     <th>
-                                        ##
+                                        #
                                     </th>
                                     <th>
                                         ที่อยู่ของอาคาร
@@ -68,9 +69,15 @@
                                     <th>
                                         วันที่เริ่มประกัน
                                     </th>
+                                    <th>
+                                        วันที่หมดประกัน
+                                    </th>
+                                    <th>
+                                        จัดการข้อมูล
+                                    </th>
                             </tr>
                         </thead>
-                        <tbody class="text-center">
+                        <tbody class="text-left">
 
 
                             <?php
@@ -80,7 +87,68 @@
                             {
                             ?>
                             <tr>
-                                
+                                <td>
+                                    <?php echo $n;?>
+                                </td>
+                                <td class="text-nowrap">
+                                    <?php echo $num['build_address'];?>
+                                </td>
+                                <td>
+                                    <?php echo $num['rent_month'];?>
+                                </td>
+                                <td>
+                                    <?php echo $num['rent_year'];?>
+                                </td>
+                                <td>
+                                    <?php echo $num['rent_deposit'];?>
+                                </td>
+                                <td>
+                                    <?php echo $num['regis_fee'];?>
+                                </td>
+                                <td>
+                                    <?php echo $num['width'];?>
+                                </td>
+                                <td>
+                                    <?php echo $num['lenght'];?>
+                                </td>
+                                <td>
+                                    <?php echo $num['numb_layer'];?>
+                                </td>
+                                <td>
+                                    <?php echo $num['numb_row'];?>
+                                </td>
+                                <td>
+                                    <?php echo $num['type'];?>
+                                </td>
+                                <td>
+                                    <?php echo $num['use_area'];?>
+                                </td>
+                                <td>
+                                    <?php echo $num['rate'];?>
+                                </td>
+                                <td>
+                                    <?php echo $num['land_tax'];?>
+                                </td>
+                                <td>
+                                    <?php echo $num['contract_fee'];?>
+                                </td>
+                                <td>
+                                    <?php echo $num['contract_fee2'];?>
+                                </td>
+                                <td>
+                                    <?php echo $num['number_insurance'];?>
+                                </td>
+                                <td class="text-nowrap">
+                                    <?php echo $num['date_insurance'];?>
+                                </td>
+                                <td class="text-nowrap">
+                                    <?php echo $num['date_insurance_stop'];?>
+                                </td>
+                                <td class="text-nowrap">
+                                    <a href="officer.php?p=add_build&id4edit=<?php echo $num['id']; ?>"><button class="btn btn-warning">แก้ไข</button></a>
+                                    <button class="btn btn-danger">ลบ</button>
+                                    
+                                </td>
                             </tr>
                             <?php
                             $n++;
@@ -90,6 +158,7 @@
 
                         </tbody>
                     </table>
+                    </div>
                 </div>
             </div>
 

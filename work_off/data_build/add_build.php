@@ -122,73 +122,114 @@
                         $id4edit = $_GET['id4edit'];
                     $edit = new queryData();
 
-                    $sql = $edit->runQuery("SELECT * FROM user WHERE id='$id4edit' ");
+                    $sql = $edit->runQuery("SELECT * FROM data_build WHERE id='$id4edit' ");
                     if($sql){
                         $fetch = mysqli_fetch_array($sql);
                         ?>
         <div class="card">
             <div class="card-header text-center">
-                <h3 class="font-weight-bold text-center"><i class="fas fa-user-edit text-success"></i> แก้ไขผู้ใช้งาน</h3>
+                <h3 class="font-weight-bold"><i class="fas fa-folder-plus"></i> แก้ไขข้อมูลอาคาร</h3>
             </div>
             <div class="card-body"> 
         
-                    <form class="jumbotron" action="../work_off/editUser/chkEdit.php" method="post">
+                    <form class="jumbotron" action="../work_off/data_build/chkEdit.php" method="post">
                 <div class="form-row">
                     <div class="form-group col-md-6">
-                    <label>Username</label>
-                    <input type="text" class="form-control border border-success" id="inputUsername" name="id" value="<?php echo $fetch['id'];?>" hidden>
-                    <input type="text" class="form-control border border-success" id="inputUsername" name="username" value="<?php echo $fetch['username'];?>">
+                    <label>ที่อยู่ของอาคาร</label>
+                    <textarea  class="form-control" id="inputBuild_address" name="build_address" required><?php echo $fetch['build_address']; ?></textarea> 
                     </div>
-                    <div class="form-group col-md-6">
-                    <label>Password</label>
-                    <input type="text" class="form-control border border-success" id="inputPassword" name="password" value="<?php echo $fetch['password'];?>">
+                    <div class="form-group col-md-3">
+                    <label>ค่าเช่า/เดือน</label>
+                    <input type="number" class="form-control" id="inputRent_month" name="rent_month" required placeholder="กรอกค่าเช่า/เดือน" value="<?php echo $fetch['rent_month']; ?>">
+                    </div>
+                    <div class="form-group col-md-3">
+                    <label>ค่าเช่า/ปี</label>
+                    <input type="number" class="form-control" id="inputRent_year" name="rent_year" required placeholder="กรอกค่าเช่า/ปี" value="<?php echo $fetch['rent_year']; ?>">
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="form-group col-md-2">
-                    <label>คำนำหน้า</label>
-                    <input type="text" class="form-control border border-success" id="inputUsername" name="title_name"  value="<?php echo $fetch['title_name'];?>">
+                    <label>เงินประกันการเช่า</label>
+                    <input type="number" class="form-control" id="inputRent_deposit" name="rent_deposit" required placeholder="กรอกเงินประกันการเช่า" value="<?php echo $fetch['rent_deposit']; ?>">
                     </div>
-                    <div class="form-group col-md-5">
-                    <label>ชื่อ</label>
-                    <input type="text" class="form-control border border-success" id="inputName" name="first_name" value="<?php echo $fetch['first_name'];?>">
+                    <div class="form-group col-md-2">
+                    <label>ค่าบำรุงการจดทะเบียน</label>
+                    <input type="number" class="form-control" id="inputRegis_fee" name="regis_fee" required placeholder="กรอกค่าบำรุงการจดทะเบียน" value="<?php echo $fetch['regis_fee']; ?>">
                     </div>
-                    <div class="form-group col-md-5">
-                    <label>นามสกุล</label>
-                    <input type="text" class="form-control border border-success" id="inputLastname" name="last_name"  value="<?php echo $fetch['last_name'];?>">
+                    <div class="form-group col-md-2">
+                    <label>ความกว้าง</label>
+                    <input type="number" class="form-control" id="inputWidth" name="width" required placeholder="กรอกความกว้าง" value="<?php echo $fetch['width']; ?>">
+                    </div>
+                    <div class="form-group col-md-2">
+                    <label>ความยาว</label>
+                    <input type="number" class="form-control" id="inputLenght" name="lenght" required placeholder="กรอกความยาว" value="<?php echo $fetch['lenght']; ?>">
+                    </div>
+                    <div class="form-group col-md-2">
+                    <label>จำนวนชั้น</label>
+                    <input type="number" class="form-control" id="inputNumb_layer" name="numb_layer" required placeholder="กรอกจำนวนชั้น" value="<?php echo $fetch['numb_layer']; ?>">
+                    </div>
+                    <div class="form-group col-md-2">
+                    <label>จำนวนคูหา</label>
+                    <input type="number" class="form-control" id="inputNumb_row" name="numb_row" required placeholder="กรอกจำนวนคูหา" value="<?php echo $fetch['numb_row']; ?>">
                     </div>
                 </div>
                 <div class="form-row">
-                    <div class="form-group col-md-4">
-                    <label for="inputCity">E-mail</label>
-                    <input type="email" class="form-control border border-success" id="inputEmail" name="email" value="<?php echo $fetch['email'];?>">
-                    </div>
-                    <div class="form-group col-md-4">
-                    <label for="inputCity">เบอร์โทรติดต่อ</label>
-                    <input type="text" class="form-control border border-success" id="inputUserlevel" name="phone_number" value="<?php echo $fetch['phone_number'];?>" maxlength="10">
-                    </div>
-                    <div class="form-group col-md-4">
-                    <label for="inputState">สถานะ</label>
-                    <select id="inputState" class="form-control border border-success" name="user_level" required>
-                        <option selected value="<?php echo $fetch['user_level'];?>"><?php echo $fetch['user_level'];?></option>
-                        <option value="แอดมิน">แอดมิน</option>
-                        <option value="เจ้าหน้าที่">เจ้าหน้าที่</option>
-                        <option value="ผู้บริหาร">ผู้บริหาร</option>
+                    <div class="form-group col-md-2">
+                    <label for="inputState">ประเภท</label>
+                    <select id="inputState" class="form-control" name="type" required placeholder="เลือก">
+                        <option value="อาศัย">อาศัย</option>
+                        <option value="ร้านค้า">ร้านค้า</option>
                     </select>
+                    </div>
+                    <div class="form-group col-md-2">
+                    <label>พื้นที่ใช้สอย</label>
+                    <input type="text" class="form-control" id="inputUse_areal" name="use_area" required placeholder="กรอกพื้นที่ใช้สอย" value="<?php echo $fetch['use_area']; ?>" >
+                    </div>
+                    <div class="form-group col-md-2">
+                    <label>เรตค่าเช่า</label>
+                    <input type="number" class="form-control" id="inputRate" name="rate" required placeholder="กรอกเรตค่าเช่า" value="<?php echo $fetch['rate']; ?>">
+                    </div>
+                    <div class="form-group col-md-2">
+                    <label>ภาษีที่ดิน/ปี</label>
+                    <input type="number" class="form-control" id="inputLand_tax" name="land_tax" required placeholder="กรอกภาษีที่ดิน/ปี" value="<?php echo $fetch['land_tax']; ?>">
+                    </div>
+                    <div class="form-group col-md-2">
+                    <label>ค่าธรรมเนียมสัญญา</label>
+                    <input type="number" class="form-control" id="inputContract_fee" name="contract_fee" required placeholder="กรอกค่าธรรมเนียมสัญญา" value="<?php echo $fetch['contract_fee']; ?>">
+                    </div>
+                    <div class="form-group col-md-2">
+                    <label>ค่าทำสัญญา</label>
+                    <input type="number" class="form-control" id="inputContract_fee2" name="contract_fee2" required placeholder="กรอกค่าทำสัญญา" value="<?php echo $fetch['contract_fee2']; ?>">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                    <label>เลขประกันภัย</label>
+                    <input type="text" class="form-control" id="inputNumber_insurance" name="number_insurance" required placeholder="กรอกเลขประกันภัย" value="<?php echo $fetch['number_insurance']; ?>">
+                    </div>
+                    <div class="form-group col-md-3">
+                    <label>วันที่เริ่มประกัน</label>
+                    <input type="date" class="form-control" id="inputDate_insurance" name="date_insurance" required placeholder="กรอกวันที่เริ่มประกัน" value="<?php echo $fetch['date_insurance']; ?>">
+                    </div>
+                    <div class="form-group col-md-3">
+                    <label>วันที่หมดประกัน</label>
+                    <input type="date" class="form-control" id="inputDate_insurance_stop" name="date_insurance_stop" required placeholder="กรอกวันที่หมดประกัน"  value="<?php echo $fetch['date_insurance']; ?>">
                     </div>
                 </div>
 
                 <div class="text-right">
                 <button type="reset" class="btn btn-warning">Reset</button>
-                <button type="submit" class="btn btn-success">แก้ไขผู้ใช้งาน</button>
+                <button type="submit" class="btn btn-success" name="submit">แก้ไขข้อมูลอาคาร</button>
                 </div>
+
+                </div>
+                
 
                 </form>
 
             
 
             </div>
-        </div>
                 <?php
             }else{
                 echo"Can't SQL";
