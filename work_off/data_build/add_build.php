@@ -9,7 +9,7 @@
             </div>
             <div class="card-body"> 
         
-                    <form class="jumbotron" action="######" method="post">
+                    <form class="jumbotron" action="../work_off/data_build/chk_addBuild.php" method="post">
                 <div class="form-row">
                     <div class="form-group col-md-6">
                     <label>ที่อยู่ของอาคาร</label>
@@ -96,7 +96,7 @@
 
                 <div class="text-right">
                 <button type="reset" class="btn btn-warning">Reset</button>
-                <button type="submit" class="btn btn-success">เพิ่มข้อมูลอาคาร</button>
+                <button type="submit" class="btn btn-success" name="submit">เพิ่มข้อมูลอาคาร</button>
                 </div>
 
                 </div>

@@ -11,10 +11,15 @@
                     <h3 class="font-weight-bold text-center"><b><i class="fas fa-table"></i> ตารางจัดการข้อมูลอาคารอสังหาริมทรัพย์</b></h3>
                 </div>
                 <div class="card-body">
-                    <table class="table table-striped min-vw-100" id="myTable">
+                    <table class="table table-striped w-100" id="myTable">
                         <thead class="text-center">
                             <tr id="bg_hd_table_m">
-
+                                    <th>
+                                        asfasf
+                                    </th>
+                                    <th>
+                                        asfasf
+                                    </th>
                             </tr>
                         </thead>
                         <tbody class="text-center">
@@ -22,7 +27,7 @@
 
                             <?php
                             $n=1;
-                            $res = $insertUser->runQuery("SELECT * FROM user ORDER BY id");
+                            $res = $insertUser->runQuery("SELECT * FROM data_build ORDER BY id");
                             while($num = mysqli_fetch_array($res))
                             {
                             ?>
