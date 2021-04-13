@@ -118,6 +118,10 @@
                         include_once('../work_off/data_build/show_data.php');
                     break;
                     }
+                    case 'add_build' :{
+                        include_once('../work_off/data_build/add_build.php');
+                    break;
+                    }
             
                 }
             ?>
