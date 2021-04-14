@@ -80,9 +80,13 @@
                     </div>
                 </div>
                 <div class="form-row">
-                    <div class="form-group col-md-6">
+                    <div class="form-group col-md-3">
                     <label>เลขประกันภัย</label>
                     <input type="text" class="form-control" id="inputNumber_insurance" name="number_insurance" required placeholder="กรอกเลขประกันภัย">
+                    </div>
+                    <div class="form-group col-md-3">
+                    <label>ค่าประกันอัคคีภัย</label>
+                    <input type="text" class="form-control" id="inputInsurance_fire" name="insurance_fire" required placeholder="กรอกค่าประกันอัคคีภัย">
                     </div>
                     <div class="form-group col-md-3">
                     <label>วันที่เริ่มประกัน</label>
@@ -204,9 +208,13 @@
                     </div>
                 </div>
                 <div class="form-row">
-                    <div class="form-group col-md-6">
+                    <div class="form-group col-md-3">
                     <label>เลขประกันภัย</label>
                     <input type="text" class="form-control" id="inputNumber_insurance" name="number_insurance" required placeholder="กรอกเลขประกันภัย" value="<?php echo $fetch['number_insurance']; ?>">
+                    </div>
+                    <div class="form-group col-md-3">
+                    <label>ค่าประกันอัคคีภัย</label>
+                    <input type="number" class="form-control" id="inputInsurance_fire" name="insurance_fire" required placeholder="กรอกค่าประกันภัย"  value="<?php echo $fetch['insurance_fire']; ?>">
                     </div>
                     <div class="form-group col-md-3">
                     <label>วันที่เริ่มประกัน</label>

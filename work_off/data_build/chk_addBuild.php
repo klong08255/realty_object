@@ -24,13 +24,14 @@
         $number_insurance = $_POST['number_insurance'];
         $date_insurance = $_POST['date_insurance'];
         $date_insurance_stop = $_POST['date_insurance_stop'];
+        $insurance_fire = $_POST['insurance_fire'];
 
         //TODO: For SQL ------------------------------------------------
         
         include_once('../../function.php');
         $insertBuild = new queryData();
 
-        $sql4build = $insertBuild->runQuery("INSERT INTO data_build(`build_address`, `rent_month`, `rent_year`, `rent_deposit`, `regis_fee`, `width`, `lenght`, `numb_layer`, `numb_row`, `type`, `use_area`, `rate`, `land_tax`, `contract_fee`, `contract_fee2`, `number_insurance`, `date_insurance`, `date_insurance_stop`, `status`) VALUE ('$build_address', 
+        $sql4build = $insertBuild->runQuery("INSERT INTO data_build(`build_address`, `rent_month`, `rent_year`, `rent_deposit`, `regis_fee`, `width`, `lenght`, `numb_layer`, `numb_row`, `type`, `use_area`, `rate`, `land_tax`, `contract_fee`, `contract_fee2`, `number_insurance`, `date_insurance`, `date_insurance_stop`,`insurance_fire`,`status`) VALUE ('$build_address', 
         '$rent_month',
         '$rent_year',
         '$rent_deposit',
@@ -48,6 +49,7 @@
         '$number_insurance',
         '$date_insurance',
         '$date_insurance_stop',
+        '$insurance_fire',
         'empty'
         )");
 

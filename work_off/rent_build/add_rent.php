@@ -10,9 +10,64 @@
             <div class="card-body"> 
         
                 <form class="jumbotron" action="###" method="post">
+                    <div class="form-row">
+                        
+                        <div class="form-group col-md-4">
+                            <label for="inputState">ตารางbuild</label>
+                                <select id="inputState" class="form-control" name="type" required placeholder="เลือก">
+                                    <option value="อาศัย"></option>
+                                    <option value="ร้านค้า"></option>
+                                </select>
+                        </div>
+                        <div class="form-group col-md-2">
+                        <label>ชื่อ-นามสกุล</label>
+                        <input type="text" class="form-control" id="inputName" name="name" required placeholder="กรอกชื่อ-นามสกุล">
+                        </div>
+                        <div class="form-group col-md-2">
+                        <label>เลขประจำตัวประชาชน</label>
+                        <input type="text" class="form-control" id="inputId_card" name="id_card" required placeholder="กรอกเลขประจำตัวประชาชน">
+                        </div>
+                        <div class="form-group col-md-4">
+                        <label>บ้านเลขที่ตามบัตรประชาชน</label>
+                        <textarea  class="form-control" id="inputAddress" name="address" required></textarea>
+                        </div>
+                        <div class="form-group col-md-2">
+                        <label>วันเดือนปีเกิด</label>
+                        <input type="date" class="form-control" id="inputBrithday" name="brithday" required placeholder="">
+                        </div>
+                        <div class="form-group col-md-1">
+                        <label>อายุ</label>
+                        <input type="number" class="form-control" id="inputAge" name="age" required placeholder="กรอกอายุ">
+                        </div>
+                        <div class="form-group col-md-1">
+                        <label>เชื้อชาติ</label>
+                        <input type="text" class="form-control" id="inputNationality" name="nationality" required placeholder="กรอกเชื้อชาติ">
+                        </div>
+                        <div class="form-group col-md-1">
+                        <label>สัญชาติ</label>
+                        <input type="text" class="form-control" id="inputNationality2" name="nationality2" required placeholder="กรอกสัญชาติ">
+                        </div>
+                        <div class="form-group col-md-2">
+                        <label>โทรศัพท์</label>
+                        <input type="text" class="form-control" id="inputPhone_number" name="phone_number" required placeholder="กรอกเบอร์โทรศัพท์">
+                        </div>
+                        <div class="form-group col-md-2">
+                        <label>สถานะจ่ายเงิน</label>
+                            <select id="inputState" class="form-control" name="type" required placeholder="เลือก">
+                                <option value="อาศัย"></option>
+                                <option value="ร้านค้า"></option>
+                            </select>
+                        </div>
+                    </div>
 
+                <div class="text-right">
+                    <button type="reset" class="btn btn-warning">Reset</button>
+                    <button type="submit" class="btn btn-success" name="submit">เพิ่มข้อมูลการเช่า</button>
+                </div>
                 <!-- แก้กงงี้ -->
                 </form>
+                    
+                    
 
             
 

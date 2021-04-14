@@ -23,6 +23,7 @@
         $contract_fee = $_POST['contract_fee'];
         $contract_fee2 = $_POST['contract_fee2'];
         $number_insurance = $_POST['number_insurance'];
+        $insurance_fire = $_POST['insurance_fire'];
         $date_insurance = $_POST['date_insurance'];
         $date_insurance_stop = $_POST['date_insurance_stop'];
 
@@ -31,7 +32,7 @@
         include_once('../../function.php');
         $insertBuild = new queryData();
 
-        $sql4build = $insertBuild->runQuery("UPDATE data_build SET `build_address`='$build_address',`rent_month`='$rent_month',`rent_year`='$rent_year',`rent_deposit`='$rent_deposit',`regis_fee`='$regis_fee',`width`='$width',`lenght`='$lenght',`numb_layer`='$numb_layer',`numb_row`='$numb_row',`type`='$type',`use_area`='$use_area',`rate`='$rate',`land_tax`='$land_tax',`contract_fee`='$contract_fee',`contract_fee2`='$contract_fee2',`number_insurance`='$number_insurance',`date_insurance`='$date_insurance',`date_insurance_stop`='$date_insurance_stop' WHERE id='$id4edit' ");
+        $sql4build = $insertBuild->runQuery("UPDATE data_build SET `build_address`='$build_address',`rent_month`='$rent_month',`rent_year`='$rent_year',`rent_deposit`='$rent_deposit',`regis_fee`='$regis_fee',`width`='$width',`lenght`='$lenght',`numb_layer`='$numb_layer',`numb_row`='$numb_row',`type`='$type',`use_area`='$use_area',`rate`='$rate',`land_tax`='$land_tax',`contract_fee`='$contract_fee',`contract_fee2`='$contract_fee2',`number_insurance`='$number_insurance',`insurance_fire`='$insurance_fire',`date_insurance`='$date_insurance',`date_insurance_stop`='$date_insurance_stop' WHERE id='$id4edit' ");
 
         if($sql4build){
             ?>

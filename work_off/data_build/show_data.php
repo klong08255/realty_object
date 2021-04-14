@@ -76,6 +76,9 @@
                                         วันที่หมดประกัน
                                     </th>
                                     <th>
+                                        ประกันอัคคีภัย
+                                    </th>
+                                    <th>
                                         จัดการข้อมูล
                                     </th>
                             </tr>
@@ -159,6 +162,9 @@
                                 </td>
                                 <td class="text-nowrap">
                                     <?php echo $num['date_insurance_stop'];?>
+                                </td>
+                                <td class="text-nowrap">
+                                    <?php echo $num['insurance_fire'];?>
                                 </td>
                                 <td class="text-nowrap">
                                     <a href="officer.php?p=add_build&id4edit=<?php echo $num['id']; ?>"><button class="btn btn-warning">แก้ไข</button></a>
