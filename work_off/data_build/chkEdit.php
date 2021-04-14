@@ -6,6 +6,7 @@
     
     if(isset($_POST['submit'])){
 
+        $id4edit = $_POST['id4edit'];
         $build_address = $_POST['build_address'];
         $rent_month = $_POST['rent_month'];
         $rent_year = $_POST['rent_year'];
@@ -30,7 +31,7 @@
         include_once('../../function.php');
         $insertBuild = new queryData();
 
-        $sql4build = $insertBuild->runQuery("");
+        $sql4build = $insertBuild->runQuery("UPDATE data_build SET `build_address`='$build_address',`rent_month`='$rent_month',`rent_year`='$rent_year',`rent_deposit`='$rent_deposit',`regis_fee`='$regis_fee',`width`='$width',`lenght`='$lenght',`numb_layer`='$numb_layer',`numb_row`='$numb_row',`type`='$type',`use_area`='$use_area',`rate`='$rate',`land_tax`='$land_tax',`contract_fee`='$contract_fee',`contract_fee2`='$contract_fee2',`number_insurance`='$number_insurance',`date_insurance`='$date_insurance',`date_insurance_stop`='$date_insurance_stop' WHERE id='$id4edit' ");
 
         if($sql4build){
             ?>
@@ -38,7 +39,7 @@
 $(document).ready(function() {
     Swal.fire({
         icon: 'success',
-        title: 'เพิ่มอาคารใหม่เรียบร้อยแล้ว',
+        title: 'แก้ไขอาคารใหม่เรียบร้อยแล้ว',
         showConfirmButton: false,
         timer: 2000
     }).then(function() {

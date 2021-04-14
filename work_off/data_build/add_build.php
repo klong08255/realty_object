@@ -64,7 +64,7 @@
                     </div>
                     <div class="form-group col-md-2">
                     <label>เรตค่าเช่า</label>
-                    <input type="number" class="form-control" id="inputRate" name="rate" required placeholder="กรอกเรตค่าเช่า">
+                    <input type="text" class="form-control" id="inputRate" name="rate" required placeholder="กรอกเรตค่าเช่า">
                     </div>
                     <div class="form-group col-md-2">
                     <label>ภาษีที่ดิน/ปี</label>
@@ -135,6 +135,7 @@
                     <form class="jumbotron" action="../work_off/data_build/chkEdit.php" method="post">
                 <div class="form-row">
                     <div class="form-group col-md-6">
+                    <input type="text" name="id4edit" value="<?php echo $id4edit ; ?>" hidden>
                     <label>ที่อยู่ของอาคาร</label>
                     <textarea  class="form-control" id="inputBuild_address" name="build_address" required><?php echo $fetch['build_address']; ?></textarea> 
                     </div>
@@ -187,7 +188,7 @@
                     </div>
                     <div class="form-group col-md-2">
                     <label>เรตค่าเช่า</label>
-                    <input type="number" class="form-control" id="inputRate" name="rate" required placeholder="กรอกเรตค่าเช่า" value="<?php echo $fetch['rate']; ?>">
+                    <input type="text" class="form-control" id="inputRate" name="rate" required placeholder="กรอกเรตค่าเช่า" value="<?php echo $fetch['rate']; ?>">
                     </div>
                     <div class="form-group col-md-2">
                     <label>ภาษีที่ดิน/ปี</label>

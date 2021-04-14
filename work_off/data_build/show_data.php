@@ -13,7 +13,7 @@
                 <div class="card-body">
                 <div class="table-responsive">
                     <table class="table table-striped w-100" id="myTable">
-                        <thead class="text-center alert alert-success">
+                        <thead class="text-center alert alert-success text-nowrap">
                             <tr id="bg_hd_table_m">
                                     <th>
                                         #
@@ -77,7 +77,7 @@
                                     </th>
                             </tr>
                         </thead>
-                        <tbody class="text-left">
+                        <tbody class="text-left text-nowrap">
 
 
                             <?php
@@ -90,7 +90,7 @@
                                 <td>
                                     <?php echo $n;?>
                                 </td>
-                                <td class="text-nowrap">
+                                <td>
                                     <?php echo $num['build_address'];?>
                                 </td>
                                 <td>
@@ -146,7 +146,10 @@
                                 </td>
                                 <td class="text-nowrap">
                                     <a href="officer.php?p=add_build&id4edit=<?php echo $num['id']; ?>"><button class="btn btn-warning">แก้ไข</button></a>
+
+                                    <a href="officer.php?p=data_build&id4del=<?php echo $num['id']; ?>&del=chk">
                                     <button class="btn btn-danger">ลบ</button>
+                                    </a>
                                     
                                 </td>
                             </tr>
@@ -185,7 +188,7 @@
             $(document).ready(function() {
                 Swal.fire({
                     title: 'ต้องการลบหรือไม่?',
-                    text: "คุณต้องการลบผู้ใช้งานหรือไม่!",
+                    text: "คุณต้องการลบอาคารหรือไม่!",
                     icon: 'warning',
                     showCancelButton: true,
                     confirmButtonColor: '#3085d6',
@@ -194,9 +197,9 @@
                     cancelButtonText: 'ไม่ต้องการ'
                 }).then((result) => {
                     if (result.isConfirmed) {
-                        window.location.href = 'officer.php?p=showMember&chkDel=ok&id4del=<?php echo $id4del; ?>';
+                        window.location.href = 'officer.php?p=data_build&chkDel=ok&id4del=<?php echo $id4del; ?>';
                     } else {
-                        window.location.href = 'officer.php?p=showMember';
+                        window.location.href = 'officer.php?p=data_build';
                     }
                 })
             });
@@ -207,7 +210,7 @@
                     if(isset($_GET['chkDel'])=="ok"){
                         $delUser = new queryData();
                         $id4del = $_GET['id4del'];
-                        $sql = $delUser->runQuery("DELETE FROM user WHERE id='$id4del' ");
+                        $sql = $delUser->runQuery("DELETE FROM data_build WHERE id='$id4del' ");
                         if($sql){
                             ?>
             <script>
@@ -217,7 +220,7 @@
                 showConfirmButton: false,
                 timer:'2000'
             }).then(function(){
-                window.location.href = 'officer.php?p=showMember';
+                window.location.href = 'officer.php?p=data_build';
             });
             </script>
             <?php
