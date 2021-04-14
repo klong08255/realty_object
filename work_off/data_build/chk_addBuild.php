@@ -30,7 +30,7 @@
         include_once('../../function.php');
         $insertBuild = new queryData();
 
-        $sql4build = $insertBuild->runQuery("INSERT INTO data_build(`build_address`, `rent_month`, `rent_year`, `rent_deposit`, `regis_fee`, `width`, `lenght`, `numb_layer`, `numb_row`, `type`, `use_area`, `rate`, `land_tax`, `contract_fee`, `contract_fee2`, `number_insurance`, `date_insurance`, `date_insurance_stop`) VALUE ('$build_address', 
+        $sql4build = $insertBuild->runQuery("INSERT INTO data_build(`build_address`, `rent_month`, `rent_year`, `rent_deposit`, `regis_fee`, `width`, `lenght`, `numb_layer`, `numb_row`, `type`, `use_area`, `rate`, `land_tax`, `contract_fee`, `contract_fee2`, `number_insurance`, `date_insurance`, `date_insurance_stop`, `status`) VALUE ('$build_address', 
         '$rent_month',
         '$rent_year',
         '$rent_deposit',
@@ -47,7 +47,8 @@
         '$contract_fee2',
         '$number_insurance',
         '$date_insurance',
-        '$date_insurance_stop'
+        '$date_insurance_stop',
+        'empty'
         )");
 
         if($sql4build){

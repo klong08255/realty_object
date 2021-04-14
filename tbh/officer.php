@@ -74,6 +74,11 @@
                             <div class="sb-nav-link-icon "><i class="fas fa-folder"></i></div>
                             จัดการข้อมูลอาคารอสังหาริมทรัพย์
                         </a>
+                        <a class="nav-link collapsed" href="officer.php?p=show_rent_mange" data-target="#collapseLayouts"
+                            aria-expanded="false" aria-controls="collapseLayouts">
+                            <div class="sb-nav-link-icon "><i class="fas fa-folder"></i></div>
+                            จัดการการเช่าอาคารอสังหาริมทรัพย์
+                        </a>
                     </div>
                 </div>
             </nav>
@@ -120,6 +125,14 @@
                     }
                     case 'add_build' :{
                         include_once('../work_off/data_build/add_build.php');
+                    break;
+                    }
+                    case 'show_rent_mange' :{
+                        include_once('../work_off/rent_build/show_rent_mange.php');
+                    break;
+                    }
+                    case 'add_rent' :{
+                        include_once('../work_off/rent_build/add_rent.php');
                     break;
                     }
             

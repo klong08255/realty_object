@@ -19,6 +19,9 @@
                                         #
                                     </th>
                                     <th>
+                                        สถานะอาคาร
+                                    </th>
+                                    <th>
                                         ที่อยู่ของอาคาร
                                     </th>
                                     <th>
@@ -89,6 +92,19 @@
                             <tr>
                                 <td>
                                     <?php echo $n;?>
+                                </td>
+                                <td>
+                                    <?php
+                                    if($num['status'] =="empty"){
+                                    ?>
+                                    <button class="alert alert-success p-1 w-100">ว่าง</button>
+                                    <?php
+                                    }else{
+                                    ?>
+                                    <button class="alert alert-danger p-1 w-100">ไม่ว่าง</button>
+                                    <?php
+                                    }
+                                    ?>
                                 </td>
                                 <td>
                                     <?php echo $num['build_address'];?>
