@@ -53,15 +53,15 @@
                         <label>วันเดือนปีเกิด</label>
                         <input type="date" class="form-control" id="inputBrithday" name="brithday" required placeholder="">
                         </div>
-                        <div class="form-group col-md-1">
+                        <div class="form-group col-md-2">
                         <label>อายุ</label>
                         <input type="number" class="form-control" id="inputAge" name="age" required placeholder="กรอกอายุ">
                         </div>
-                        <div class="form-group col-md-1">
+                        <div class="form-group col-md-2">
                         <label>เชื้อชาติ</label>
                         <input type="text" class="form-control" id="inputNationality" name="nationality" required placeholder="กรอกเชื้อชาติ">
                         </div>
-                        <div class="form-group col-md-1">
+                        <div class="form-group col-md-2">
                         <label>สัญชาติ</label>
                         <input type="text" class="form-control" id="inputNationality2" name="nationality2" required placeholder="กรอกสัญชาติ">
                         </div>
@@ -75,6 +75,14 @@
                                 <option value="ชำระแล้ว">ชำระแล้ว</option>
                                 <option value="ยังไม่ชำะ">ยังไม่ชำะ</option>
                             </select>
+                        </div>
+                        <div class="form-group col-md-2">
+                        <label>วันที่เริ่มเช่า</label>
+                        <input type="date" class="form-control" id="input" name="" required>
+                        </div>
+                        <div class="form-group col-md-2">
+                        <label>วันที่ครบสัญญาเช่า</label>
+                        <input type="date" class="form-control" id="input" name="" required>
                         </div>
                     </div>
 
