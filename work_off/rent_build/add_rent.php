@@ -9,7 +9,7 @@
             </div>
             <div class="card-body"> 
         
-                <form class="jumbotron" action="###" method="post">
+                <form class="jumbotron" action="../work_off/rent_build/chk_add.php" method="post">
                     <div class="form-row">
                         
                         <div class="form-group col-md-4">
@@ -25,7 +25,7 @@
                                     if($sql1){
                                         while($num1 = mysqli_fetch_array($sql1)){
                                             ?>
-                                                <option class="text-wrap" value=""><?php echo $num1['build_address']; ?></option>
+                                                <option class="text-wrap" value="<?php echo $num1['id'];?>"><?php echo $num1['build_address']; ?></option>
                                             <?php
                                         }
                                     }else{
@@ -43,7 +43,7 @@
                         </div>
                         <div class="form-group col-md-2">
                         <label>เลขประจำตัวประชาชน</label>
-                        <input type="number" class="form-control" id="inputId_card" name="id_card" required placeholder="กรอกเลขประจำตัวประชาชน" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==13) return false;">
+                        <input type="text" class="form-control" id="inputId_card" name="card_id4people" required placeholder="กรอกเลขประจำตัวประชาชน" maxlength="13">
                         </div>
                         <div class="form-group col-md-4">
                         <label>บ้านเลขที่ตามบัตรประชาชน</label>
@@ -67,22 +67,22 @@
                         </div>
                         <div class="form-group col-md-2">
                         <label>โทรศัพท์</label>
-                        <input type="text" class="form-control" id="inputPhone_number" name="phone_number" required placeholder="กรอกเบอร์โทรศัพท์">
+                        <input type="text" class="form-control" id="inputPhone_number" name="phone_number" required placeholder="กรอกเบอร์โทรศัพท์" maxlength="10">
                         </div>
                         <div class="form-group col-md-2">
                         <label>สถานะชำระเงิน</label>
-                            <select id="inputState" class="form-control" name="type" required placeholder="เลือก">
+                            <select id="inputState" class="form-control" name="status_pay" required placeholder="เลือก">
                                 <option value="ชำระแล้ว">ชำระแล้ว</option>
-                                <option value="ยังไม่ชำะ">ยังไม่ชำะ</option>
+                                <option value="ยังไม่ชำะ">ยังไม่ชำระ</option>
                             </select>
                         </div>
                         <div class="form-group col-md-2">
                         <label>วันที่เริ่มเช่า</label>
-                        <input type="date" class="form-control" id="input" name="" required>
+                        <input type="date" class="form-control" id="input" name="datestart_rent" required>
                         </div>
                         <div class="form-group col-md-2">
-                        <label>วันที่ครบสัญญาเช่า</label>
-                        <input type="date" class="form-control" id="input" name="" required>
+                        <label>วันที่ครบกำหนด</label>
+                        <input type="date" class="form-control" id="input" name="datestop_rent" required>
                         </div>
                     </div>
 

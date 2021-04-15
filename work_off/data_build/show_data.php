@@ -100,7 +100,7 @@
                                     <?php
                                     if($num['status'] =="empty"){
                                     ?>
-                                    <button class="alert alert-success p-1 w-100">ว่าง</button>
+                                    <a href="officer.php?p=add_rent"><button class="alert alert-success p-1 w-100">ว่าง</button></a>
                                     <?php
                                     }else{
                                     ?>
