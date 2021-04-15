@@ -16,7 +16,34 @@
                         <thead class="text-center alert alert-success text-nowrap">
                             <tr id="bg_hd_table_m">
                                     <th>
-                                        #
+                                        บ้านเลขที่
+                                    </th>
+                                    <th>
+                                        ชื่อ-นามสกุล
+                                    </th>
+                                    <th>
+                                    อายุ
+                                    </th>
+                                    <th>
+                                    เชื้อชาติ
+                                    </th>
+                                    <th>
+                                    สัญชาติ
+                                    </th>
+                                    <th>
+                                    บ้านเลขที่ตามบัตรประชาชน	
+                                    </th>
+                                    <th>
+                                    โทรศัพท์
+                                    </th>
+                                    <th>
+                                    เลขบัตรประจำตัวประชาชน	
+                                    </th>
+                                    <th>
+                                    วันเกิด	
+                                    </th>
+                                    <th>
+                                    สถานะจ่ายเงิน
                                     </th>
                             </tr>
                         </thead>
