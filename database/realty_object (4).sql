@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 14, 2021 at 09:34 AM
+-- Generation Time: Apr 15, 2021 at 05:51 AM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.11
 
@@ -47,15 +47,18 @@ CREATE TABLE `data_build` (
   `number_insurance` varchar(30) NOT NULL COMMENT 'เลขประกันภัย',
   `date_insurance` date NOT NULL COMMENT 'วันที่เริ่มประกัน',
   `date_insurance_stop` date NOT NULL COMMENT 'วันหมดประกัน',
-  `status` varchar(50) NOT NULL COMMENT 'สถานะ'
+  `insurance_fire` int(50) NOT NULL COMMENT 'ประกันอัคคีภัย',
+  `status` varchar(50) NOT NULL COMMENT 'สถานะ',
+  `total_pay` varchar(10) NOT NULL COMMENT 'ยอดชำระ'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `data_build`
 --
 
-INSERT INTO `data_build` (`id`, `build_address`, `rent_month`, `rent_year`, `rent_deposit`, `regis_fee`, `width`, `lenght`, `numb_layer`, `numb_row`, `type`, `use_area`, `rate`, `land_tax`, `contract_fee`, `contract_fee2`, `number_insurance`, `date_insurance`, `date_insurance_stop`, `status`) VALUES
-(1, '2 ซ.เทพวิถี ถ.โกสีย์ ต.ปากน้ำโพ อ.เมืองนครสวรรค์ จ.นครสวรรค์\r\n', 648, 7776, 100, 100, 4, 12, 3, 1, 'อาศัย', '144', '4.5', 0, 100, 100, '706-20-11-FR1-00043', '2021-02-01', '2021-02-01', '');
+INSERT INTO `data_build` (`id`, `build_address`, `rent_month`, `rent_year`, `rent_deposit`, `regis_fee`, `width`, `lenght`, `numb_layer`, `numb_row`, `type`, `use_area`, `rate`, `land_tax`, `contract_fee`, `contract_fee2`, `number_insurance`, `date_insurance`, `date_insurance_stop`, `insurance_fire`, `status`, `total_pay`) VALUES
+(1, '2 ซ.เทพวิถี ถ.โกสีย์ ต.ปากน้ำโพ อ.เมืองนครสวรรค์ จ.นครสวรรค์\r\n', 648, 7776, 100, 100, 4, 12, 3, 1, 'อาศัย', '144', '4.5', 0, 100, 100, '706-20-11-FR1-00043', '2021-02-01', '2021-02-01', 1000, '', ''),
+(3, '70/1', 648, 7776, 100, 100, 4, 12, 3, 1, 'ร้านค้า', '144', '4.5', 26, 100, 100, '706-20-11-FR1-00032', '2021-04-15', '2021-04-16', 1064, 'empty', '');
 
 -- --------------------------------------------------------
 
@@ -81,6 +84,26 @@ INSERT INTO `news` (`id`, `news_title`, `news_summary`, `news_description`, `new
 (2, 'ด่วน! อาคารว่างมีจำนวนจำกัด', 'ด่วนมากกกกก', '-', 'เจ้าหน้าที่ ', '161009698567396.png', '2021-01-08 09:09:45'),
 (45, 'ข่าวด่วนที่สุด ! ', 'ด่วนจี๋', 'asdf', 'เจ้าหน้าที่ ', '161009693519696.png', '2021-01-08 09:08:55'),
 (46, 'คมชัดลึก', 'ลึกกว่าข่าว', 'นะจ้ะ', 'เจ้าหน้าที่ ', '161009692392195.png', '2021-01-08 09:08:43');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `people_rent`
+--
+
+CREATE TABLE `people_rent` (
+  `id_rent` int(5) NOT NULL COMMENT 'idตาราง',
+  `id_data_build` int(5) NOT NULL COMMENT 'id data build',
+  `name` varchar(30) NOT NULL COMMENT 'ชื่อ',
+  `age` int(2) NOT NULL COMMENT 'อายุ',
+  `nationality` varchar(20) NOT NULL COMMENT 'เชื้อชาติ',
+  `nationality2` varchar(20) NOT NULL COMMENT 'สัญชาติ',
+  `address` varchar(100) NOT NULL COMMENT 'บ้านเลขที่ตามบัตรประชาชน',
+  `phone_number` varchar(10) NOT NULL COMMENT 'โทรศัพท์',
+  `id_card` int(13) NOT NULL COMMENT 'เลขบัตรปชช.',
+  `brithday` date NOT NULL COMMENT 'วันเกิด',
+  `status_pay` varchar(20) NOT NULL COMMENT 'สถานะจ่ายเงิน'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -129,6 +152,12 @@ ALTER TABLE `news`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `people_rent`
+--
+ALTER TABLE `people_rent`
+  ADD PRIMARY KEY (`id_rent`);
+
+--
 -- Indexes for table `user`
 --
 ALTER TABLE `user`
@@ -142,13 +171,19 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `data_build`
 --
 ALTER TABLE `data_build`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT COMMENT 'ลำดับที่', AUTO_INCREMENT=3;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT COMMENT 'ลำดับที่', AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `news`
 --
 ALTER TABLE `news`
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
+
+--
+-- AUTO_INCREMENT for table `people_rent`
+--
+ALTER TABLE `people_rent`
+  MODIFY `id_rent` int(5) NOT NULL AUTO_INCREMENT COMMENT 'idตาราง';
 
 --
 -- AUTO_INCREMENT for table `user`
