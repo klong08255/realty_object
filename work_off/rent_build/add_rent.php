@@ -15,8 +15,26 @@
                         <div class="form-group col-md-4">
                             <label for="inputState">ตารางbuild</label>
                                 <select id="inputState" class="form-control" name="type" required placeholder="เลือก">
-                                    <option value="อาศัย"></option>
-                                    <option value="ร้านค้า"></option>
+                                
+                                                <option selected value="">----:: โปรดเลือกอาคารที่ต้องการเช่า ::----</option>
+
+                                                <?php
+                                    $selectTable_D_B = new queryData();
+                                    
+                                    $sql1 = $selectTable_D_B->runQuery("SELECT * FROM data_build WHERE status='empty' ");
+                                    if($sql1){
+                                        while($num1 = mysqli_fetch_array($sql1)){
+                                            ?>
+                                                <option class="text-wrap" value=""><?php echo $num1['build_address']; ?></option>
+                                            <?php
+                                        }
+                                    }else{
+                                        echo"Can't SQL1";
+                                    }
+                                ?>
+                                    
+
+                                    
                                 </select>
                         </div>
                         <div class="form-group col-md-2">
@@ -25,7 +43,7 @@
                         </div>
                         <div class="form-group col-md-2">
                         <label>เลขประจำตัวประชาชน</label>
-                        <input type="text" class="form-control" id="inputId_card" name="id_card" required placeholder="กรอกเลขประจำตัวประชาชน">
+                        <input type="number" class="form-control" id="inputId_card" name="id_card" required placeholder="กรอกเลขประจำตัวประชาชน" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==13) return false;">
                         </div>
                         <div class="form-group col-md-4">
                         <label>บ้านเลขที่ตามบัตรประชาชน</label>
@@ -52,10 +70,10 @@
                         <input type="text" class="form-control" id="inputPhone_number" name="phone_number" required placeholder="กรอกเบอร์โทรศัพท์">
                         </div>
                         <div class="form-group col-md-2">
-                        <label>สถานะจ่ายเงิน</label>
+                        <label>สถานะชำระเงิน</label>
                             <select id="inputState" class="form-control" name="type" required placeholder="เลือก">
-                                <option value="อาศัย"></option>
-                                <option value="ร้านค้า"></option>
+                                <option value="ชำระแล้ว">ชำระแล้ว</option>
+                                <option value="ยังไม่ชำะ">ยังไม่ชำะ</option>
                             </select>
                         </div>
                     </div>
