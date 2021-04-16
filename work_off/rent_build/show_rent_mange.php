@@ -16,7 +16,13 @@
                         <thead class="text-center alert alert-success text-nowrap">
                             <tr id="bg_hd_table_m">
                                     <th>
-                                        บ้านเลขที่
+                                        เช่าบ้านเลขที่
+                                    </th>
+                                    <th>
+                                        วันที่เริ่มเช่า
+                                    </th>
+                                    <th>
+                                        วันที่ครบกำหนด
                                     </th>
                                     <th>
                                         ชื่อ-นามสกุล
@@ -45,25 +51,68 @@
                                     <th>
                                         สถานะจ่ายเงิน
                                     </th>
+                                    <th>
+                                        จัดการข้อมูล
+                                    </th>
                             </tr>
                         </thead>
                         <tbody class="text-left text-nowrap">
 
 
                             <?php
-                            $n=1;
-                            $res = $insertUser->runQuery("SELECT * FROM data_build ORDER BY id");
+                            
+                            $res = $insertUser->runQuery("SELECT data_build.build_address, people_rent.* FROM people_rent LEFT JOIN data_build ON people_rent.id_data_build = data_build.id");
                             while($num = mysqli_fetch_array($res))
                             {
                             ?>
                             <tr>
                                 <td>
-                                    <?php echo $n;?>
+                                    <?php
+                                        echo$num['build_address'];
+                                    ?>
+                                </td>
+                                <td>
+                                <?php echo$num['datestart_rent']; ?>
+                                </td>
+                                <td>
+                                <?php echo$num['datestop_rent']; ?>
+                                </td>
+                                <td>
+                                <?php echo$num['name']; ?>
+                                </td>
+                                <td>
+                                <?php echo$num['age']; ?>
+                                </td>
+                                <td>
+                                <?php echo$num['nationality']; ?>
+                                </td>
+                                <td>
+                                <?php echo$num['nationality2']; ?>
+                                </td>
+                                <td>
+                                <?php echo$num['address']; ?>
+                                </td>
+                                <td>
+                                <?php echo$num['phone_number']; ?>
+                                </td>
+                                <td>
+                                <?php echo$num['id_card']; ?>
+                                </td>
+                                <td>
+                                <?php echo$num['brithday']; ?>
+                                </td>
+                                <td>
+                                <?php echo$num['status_pay']; ?>
+                                </td>
+                                <td>
+                                    
+                                    <a href="officer.php?p=view_rent" class="btn btn-primary">View</a>
+                                    <a href="officer.php?p=add_rent&id4edit=<?php echo $num['id_rent']; ?>" class="btn btn-warning">Edit</a>
+                                    <a href="" class="btn btn-danger">Delete</a>
                                 </td>
                                 
                             </tr>
                             <?php
-                            $n++;
                             }
                             
                             ?>

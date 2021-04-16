@@ -135,6 +135,10 @@
                         include_once('../work_off/rent_build/add_rent.php');
                     break;
                     }
+                    case 'view_rent' :{
+                        include_once('../work_off/rent_build/view_rent.php');
+                    break;
+                    }
             
                 }
             ?>
