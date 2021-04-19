@@ -13,7 +13,7 @@
                 <div class="card-body">
                 <div class="table-responsive">
                     <table class="table table-striped w-100" id="myTable">
-                        <thead class="text-center alert alert-success text-nowrap">
+                        <thead class="text-center alert alert-success text-nowrap w-100">
                             <tr id="bg_hd_table_m">
                                     <th>
                                         #
@@ -79,6 +79,9 @@
                                         ประกันอัคคีภัย
                                     </th>
                                     <th>
+                                        ราคาค่าใช้จ่ายทั้งหมด
+                                    </th>
+                                    <th>
                                         จัดการข้อมูล
                                     </th>
                             </tr>
@@ -88,7 +91,7 @@
 
                             <?php
                             $n=1;
-                            $res = $insertUser->runQuery("SELECT * FROM data_build ORDER BY id");
+                            $res = $insertUser->runQuery("SELECT people_rent.*, data_build.* FROM data_build LEFT JOIN people_rent ON data_build.id = people_rent.id_data_build ORDER BY id");
                             while($num = mysqli_fetch_array($res))
                             {
                             ?>
@@ -104,7 +107,7 @@
                                     <?php
                                     }else{
                                     ?>
-                                    <button class="alert alert-danger p-1 w-100">ไม่ว่าง</button>
+                                    <a href="officer.php?p=view_rent&id4view=<?php echo $num['id_rent']; ?>" class=""><button class="alert alert-danger p-1 w-100">ไม่ว่าง</button></a>
                                     <?php
                                     }
                                     ?>
@@ -165,6 +168,9 @@
                                 </td>
                                 <td class="text-nowrap">
                                     <?php echo $num['insurance_fire'];?>
+                                </td>
+                                <td class="text-nowrap">
+                                    <?php echo number_format($num['total_pay']);?>
                                 </td>
                                 <td class="text-nowrap">
                                     <a href="officer.php?p=add_build&id4edit=<?php echo $num['id']; ?>"><button class="btn btn-warning">แก้ไข</button></a>

@@ -7,6 +7,7 @@
         if(isset($_POST['submit'])){
 
             $id4edit = $_POST['id4edit'];
+            $id4data_b = $_POST['id4data_b'];
             $name = $_POST['name'];
             $id_card = $_POST['card_id4people'];
             $address = $_POST['address'];
@@ -18,6 +19,13 @@
             $status_pay = $_POST['status_pay'];
             $datestart_rent = $_POST['datestart_rent'];
             $datestop_rent = $_POST['datestop_rent'];
+
+            $nowDate  = date('Y-m-d');
+            if($nowDate < $datestop_rent ){
+                $update4status = new queryData();
+                $sqlUpdate = $update4status->runQuery("UPDATE data_build SET status='ไม่ว่าง' WHERE id='$id4data_b' ");              
+                $sqlUpdate = $update4status->runQuery("UPDATE people_rent SET status_rent='เช่าอยู่' WHERE id_rent='$id4edit' ");              
+            }
            
             //todo: SQL Zone 4 Edit
 

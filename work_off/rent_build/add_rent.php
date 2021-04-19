@@ -113,7 +113,7 @@
                         $id4edit = $_GET['id4edit'];
                     $edit = new queryData();
 
-                    $sql = $edit->runQuery("SELECT data_build.build_address, people_rent.* FROM people_rent LEFT JOIN data_build ON people_rent.id_data_build = data_build.id WHERE id_rent='$id4edit' ");
+                    $sql = $edit->runQuery("SELECT data_build.*, people_rent.* FROM people_rent LEFT JOIN data_build ON people_rent.id_data_build = data_build.id WHERE id_rent='$id4edit' ");
                     if($sql){
                         $fetch = mysqli_fetch_array($sql);
                         ?>
@@ -125,7 +125,9 @@
         
                 <form class="jumbotron" action="../work_off/rent_build/chk_edit.php" method="post">
                     <input type="text" name="id4edit" value="<?php echo $fetch['id_rent'];?>" hidden="true">
+                    <input type="text" name="id4data_b" value="<?php echo $fetch['id'];?>" hidden="true">
                     <div class="form-row">
+                    
                         
                         <div class="form-group col-md-4">
                             <label for="inputState">ที่อยู่อาคารที่คุณเลือก</label>

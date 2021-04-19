@@ -15,14 +15,7 @@
                     <label>ที่อยู่ของอาคาร</label>
                     <textarea  class="form-control" id="inputBuild_address" name="build_address" required></textarea> 
                     </div>
-                    <div class="form-group col-md-3">
-                    <label>ค่าเช่า/เดือน</label>
-                    <input type="number" class="form-control" id="inputRent_month" name="rent_month" required placeholder="กรอกค่าเช่า/เดือน">
-                    </div>
-                    <div class="form-group col-md-3">
-                    <label>ค่าเช่า/ปี</label>
-                    <input type="number" class="form-control" id="inputRent_year" name="rent_year" required placeholder="กรอกค่าเช่า/ปี">
-                    </div>
+                    
                 </div>
                 <div class="form-row">
                     <div class="form-group col-md-2">
@@ -57,10 +50,6 @@
                         <option value="อาศัย">อาศัย</option>
                         <option value="ร้านค้า">ร้านค้า</option>
                     </select>
-                    </div>
-                    <div class="form-group col-md-2">
-                    <label>พื้นที่ใช้สอย</label>
-                    <input type="text" class="form-control" id="inputUse_areal" name="use_area" required placeholder="กรอกพื้นที่ใช้สอย">
                     </div>
                     <div class="form-group col-md-2">
                     <label>เรตค่าเช่า</label>
@@ -143,14 +132,7 @@
                     <label>ที่อยู่ของอาคาร</label>
                     <textarea  class="form-control" id="inputBuild_address" name="build_address" required><?php echo $fetch['build_address']; ?></textarea> 
                     </div>
-                    <div class="form-group col-md-3">
-                    <label>ค่าเช่า/เดือน</label>
-                    <input type="number" class="form-control" id="inputRent_month" name="rent_month" required placeholder="กรอกค่าเช่า/เดือน" value="<?php echo $fetch['rent_month']; ?>">
-                    </div>
-                    <div class="form-group col-md-3">
-                    <label>ค่าเช่า/ปี</label>
-                    <input type="number" class="form-control" id="inputRent_year" name="rent_year" required placeholder="กรอกค่าเช่า/ปี" value="<?php echo $fetch['rent_year']; ?>">
-                    </div>
+                    
                 </div>
                 <div class="form-row">
                     <div class="form-group col-md-2">
@@ -186,10 +168,7 @@
                         <option value="ร้านค้า">ร้านค้า</option>
                     </select>
                     </div>
-                    <div class="form-group col-md-2">
-                    <label>พื้นที่ใช้สอย</label>
-                    <input type="text" class="form-control" id="inputUse_areal" name="use_area" required placeholder="กรอกพื้นที่ใช้สอย" value="<?php echo $fetch['use_area']; ?>" >
-                    </div>
+                    
                     <div class="form-group col-md-2">
                     <label>เรตค่าเช่า</label>
                     <input type="text" class="form-control" id="inputRate" name="rate" required placeholder="กรอกเรตค่าเช่า" value="<?php echo $fetch['rate']; ?>">
