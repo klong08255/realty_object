@@ -138,7 +138,7 @@
                 class queryData extends DB_conn{
                         public function runQuery($query){
                                 $re = mysqli_query($this->dbcon, $query);
-                               return $re;
+                                return $re;
                         }
                         
 

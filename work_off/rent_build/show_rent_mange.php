@@ -8,7 +8,7 @@
 
             <div class="card">
                 <div class="card-header" id="bg_hd_card_m2">
-                    <h3 class="font-weight-bold text-center"><b><i class="fas fa-table"></i> ตรางจัดการการเช่าอาคารอสังหาริมทรัพย์</b></h3>
+                    <h3 class="font-weight-bold text-center"><b><i class="fas fa-table"></i> ตารางจัดการการเช่าอาคารอสังหาริมทรัพย์</b></h3>
                 </div>
                 <div class="card-body">
                 <div class="table-responsive">
@@ -106,7 +106,7 @@
                                 </td>
                                 <td>
                                     
-                                    <a href="officer.php?p=view_rent" class="btn btn-primary">View</a>
+                                    <a href="officer.php?p=view_rent&id4view=<?php echo $num['id_rent']; ?>" class="btn btn-primary">View</a>
                                     <a href="officer.php?p=add_rent&id4edit=<?php echo $num['id_rent']; ?>" class="btn btn-warning">Edit</a>
                                     <a href="" class="btn btn-danger">Delete</a>
                                 </td>

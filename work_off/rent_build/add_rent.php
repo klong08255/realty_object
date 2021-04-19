@@ -13,7 +13,7 @@
                     <div class="form-row">
                         
                         <div class="form-group col-md-4">
-                            <label for="inputState">ตารางbuild</label>
+                            <label for="inputState">เลือกอาคารที่ต้องการเช่า</label>
                                 <select id="inputState" class="form-control" name="type" required placeholder="เลือก">
                                 
                                                 <option selected value="">----:: โปรดเลือกอาคารที่ต้องการเช่า ::----</option>
@@ -73,7 +73,7 @@
                         <label>สถานะชำระเงิน</label>
                             <select id="inputState" class="form-control" name="status_pay" required placeholder="เลือก">
                                 <option value="ชำระแล้ว">ชำระแล้ว</option>
-                                <option value="ยังไม่ชำะ">ยังไม่ชำระ</option>
+                                <option value="ยังไม่ชำระ">ยังไม่ชำระ</option>
                             </select>
                         </div>
                         <div class="form-group col-md-2">
