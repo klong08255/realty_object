@@ -43,7 +43,7 @@
     </div>
     <div class="card-body bg-light">
                     <table class="table table-striped w-100" id="myTable">
-                <thead>
+                <thead class="alert alert-success">
                     <tr id="bg_hd_table_m">
                     <th scope="col">ลำดับ</th>
                     <th scope="col">รูปข่าวประชาสัมพันธ์</th>

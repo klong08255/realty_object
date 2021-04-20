@@ -12,7 +12,7 @@
                 </div>
                 <div class="card-body">
                     <table class="table table-striped min-vw-100" id="myTable">
-                        <thead class="text-center">
+                        <thead class="text-center alert alert-success">
                             <tr id="bg_hd_table_m">
                                 <th scope="col">ลำดับ</th>
                                 <th scope="col">Username</th>

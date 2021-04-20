@@ -76,10 +76,37 @@
                         <br>
                         <text>วันที่ครบกำหนด : </text> <text><?php echo $num['datestop_rent']; ?></text>
                         <br>
+                        <text>เลขประกันภัย : </text> <text><?php echo $num['number_insurance']; ?></text>
+                        <br>
+                        <text>วันที่เริ่มประกัน	: </text> <text><?php echo $num['date_insurance']; ?></text>
+                        <br>
+                        <text>วันหมดประกัน : </text> <text><?php echo $num['date_insurance_stop']; ?></text>
+                        <br>
+                        <text>ประเภท (อาศัย/ร้านค้า) : </text> <text><?php echo $num['type']; ?></text>
+                        <br>
+                        <text>พื้นที่ใช้สอย : </text> <text><?php echo $num['use_area']; ?></text>
+                        <br>
+                        <text>ค่าเช่า/เดือน : </text> <text><?php echo $num['rent_month']; ?></text>
+                        <br>
+                        <text>ค่าเช่า/ปี : </text> <text><?php echo $num['rent_year']; ?></text>
+                        <br>
+                        <text>เงินประกันการเช่า : </text> <text><?php echo $num['rent_deposit']; ?></text>
+                        <br>
+                        <text>ค่าบำรุงการจดทะเบียน	 : </text> <text><?php echo $num['regis_fee']; ?></text>
+                        <br>                     
+                        <text>ค่าธรรมเนียมสัญญา	: </text> <text><?php echo $num['contract_fee']; ?></text>
+                        <br>
+                        <text>ค่าทำสัญญา : </text> <text><?php echo $num['contract_fee2']; ?></text>
+                        <br>
+                        <text>ค่าธรรมเนียมสัญญา	: </text> <text><?php echo $num['contract_fee']; ?></text>
+                        <br>
+                        <text>ภาษีที่ดิน/ปี	: </text> <text><?php echo $num['land_tax']; ?></text>
+                        <br>
+                        <text>ยอดชำระ : </text> <text><?php echo $num['total_pay']; ?></text>
+                        <br>
                         <text>สถานะจ่ายเงิน : </text> <text><?php echo $num['status_pay']; ?></text>
                         <br>
-                        <text>...สิ่งที่ต้องเพิ่มจากตราง data_build พวกจำนวน พื้นที่ห้อง ราคารายปี เดือน ราคารวม
-                            *ที่จำเป็นต้องรู้</text>
+                        
 
                     </div>
                 </div>

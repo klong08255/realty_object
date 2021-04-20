@@ -37,6 +37,18 @@
                                         ค่าบำรุงการจดทะเบียน	
                                     </th>
                                     <th>
+                                        ภาษีที่ดิน/ปี
+                                    </th>
+                                    <th>
+                                        ค่าธรรมเนียมสัญญา
+                                    </th>
+                                    <th>
+                                        ค่าทำสัญญา
+                                    </th>
+                                    <th>
+                                        ประกันอัคคีภัย
+                                    </th>
+                                    <th>
                                         ความกว้าง
                                     </th>
                                     <th>
@@ -58,15 +70,6 @@
                                         เรตค่าเช่า
                                     </th>
                                     <th>
-                                        ภาษีที่ดิน/ปี
-                                    </th>
-                                    <th>
-                                        ค่าธรรมเนียมสัญญา
-                                    </th>
-                                    <th>
-                                        ค่าทำสัญญา
-                                    </th>
-                                    <th>
                                         เลขประกันภัย
                                     </th>
                                     <th>
@@ -74,9 +77,6 @@
                                     </th>
                                     <th>
                                         วันที่หมดประกัน
-                                    </th>
-                                    <th>
-                                        ประกันอัคคีภัย
                                     </th>
                                     <th>
                                         ราคาค่าใช้จ่ายทั้งหมด
@@ -128,6 +128,18 @@
                                     <?php echo $num['regis_fee'];?>
                                 </td>
                                 <td>
+                                    <?php echo $num['land_tax'];?>
+                                </td>
+                                <td>
+                                    <?php echo $num['contract_fee'];?>
+                                </td>
+                                <td>
+                                    <?php echo $num['contract_fee2'];?>
+                                </td>
+                                <td class="text-nowrap">
+                                    <?php echo $num['insurance_fire'];?>
+                                </td>
+                                <td>
                                     <?php echo $num['width'];?>
                                 </td>
                                 <td>
@@ -148,15 +160,7 @@
                                 <td>
                                     <?php echo $num['rate'];?>
                                 </td>
-                                <td>
-                                    <?php echo $num['land_tax'];?>
-                                </td>
-                                <td>
-                                    <?php echo $num['contract_fee'];?>
-                                </td>
-                                <td>
-                                    <?php echo $num['contract_fee2'];?>
-                                </td>
+                                
                                 <td>
                                     <?php echo $num['number_insurance'];?>
                                 </td>
@@ -166,9 +170,7 @@
                                 <td class="text-nowrap">
                                     <?php echo $num['date_insurance_stop'];?>
                                 </td>
-                                <td class="text-nowrap">
-                                    <?php echo $num['insurance_fire'];?>
-                                </td>
+                                
                                 <td class="text-nowrap">
                                     <?php echo number_format($num['total_pay']);?>
                                 </td>
