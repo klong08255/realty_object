@@ -20,12 +20,8 @@
             $datestart_rent = $_POST['datestart_rent'];
             $datestop_rent = $_POST['datestop_rent'];
 
-            $nowDate  = date('Y-m-d');
-            if($nowDate < $datestop_rent ){
-                $update4status = new queryData();
-                $sqlUpdate = $update4status->runQuery("UPDATE data_build SET status='ไม่ว่าง' WHERE id='$id4data_b' ");              
-                $sqlUpdate = $update4status->runQuery("UPDATE people_rent SET status_rent='เช่าอยู่' WHERE id_rent='$id4edit' ");              
-            }
+           
+            
            
             //todo: SQL Zone 4 Edit
 

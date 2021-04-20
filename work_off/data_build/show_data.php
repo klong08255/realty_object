@@ -91,7 +91,7 @@
 
                             <?php
                             $n=1;
-                            $res = $insertUser->runQuery("SELECT people_rent.*, data_build.* FROM data_build LEFT JOIN people_rent ON data_build.id = people_rent.id_data_build ORDER BY id");
+                            $res = $insertUser->runQuery("SELECT * FROM data_build ORDER BY id");
                             while($num = mysqli_fetch_array($res))
                             {
                             ?>
@@ -106,8 +106,10 @@
                                     <a href="officer.php?p=add_rent"><button class="alert alert-success p-1 w-100">ว่าง</button></a>
                                     <?php
                                     }else{
+                                        $res2 = $insertUser->runQuery("SELECT * FROM people_rent WHERE status_rent='เช่าอยู่' and id_data_build='$num[id]' ");
+                                        $num2 = mysqli_fetch_array($res2);
                                     ?>
-                                    <a href="officer.php?p=view_rent&id4view=<?php echo $num['id_rent']; ?>" class=""><button class="alert alert-danger p-1 w-100">ไม่ว่าง</button></a>
+                                    <a href="officer.php?p=view_rent&id4view=<?php echo $num2['id_rent']; ?>" class=""><button class="alert alert-danger p-1 w-100">ไม่ว่าง</button></a>
                                     <?php
                                     }
                                     ?>
