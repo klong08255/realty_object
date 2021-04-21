@@ -24,23 +24,6 @@
 
                     ?>
                     <div class="text-right" id="hideInPagePrint">
-                        <?php
-                                if($num['status_rent'] =="เช่าอยู่"){
-                            ?>
-                        <a href="officer.php?p=view_rent&id4view=<?php echo $_GET['id4view']; ?>&cancelPromise=ok"
-                            id="btnCancelPromiseRent" class="btn btn-warning">ยกเลิกสัญญาเช่า</a>
-                        <?php
-                            }elseif($num['status_rent'] =="ยกเลิกสัญญาเช่า"){
-                                $res2 = $select4thispage->runQuery("SELECT * FROM data_build WHERE id='$num[id]' ");
-                                $num2 = mysqli_fetch_array($res2);
-                                if($num2['status'] =="empty"){
-                                ?>
-                        <a href="officer.php?p=view_rent&id4view=<?php echo $_GET['id4view']; ?>&doPromiseAgain=ok"
-                            id="btnDoPromiseRentAgain" class="btn btn-success">ต่อสัญญาเช่า</a>
-                        <?php
-                                }
-                            }
-                            ?>
 
                         <button class="btn btn-primary ml-2" id="printPage">Print</button>
                     </div>
