@@ -88,25 +88,25 @@
                         <br>
                         <text>ประเภท (อาศัย/ร้านค้า) : </text> <text><?php echo $num['type']; ?></text>
                         <br>
-                        <text>พื้นที่ใช้สอย : </text> <text><?php echo $num['use_area']; ?></text>
+                        <text>พื้นที่ใช้สอย : </text> <text><?php echo $num['use_area']; ?></text> <text> ตร.ม.</text>
                         <br>
                         <text>ค่าเช่า/เดือน : </text> <text><?php echo number_format($num['rent_month']) ; ?></text> <text> บาท</text>
                         <br>
-                        <text>ค่าเช่า/ปี : </text> <text><?php echo number_format($num['rent_year']) ; ?></text>
+                        <text>ค่าเช่า/ปี : </text> <text><?php echo number_format($num['rent_year']) ; ?></text> <text> บาท</text>
                         <br>
-                        <text>เงินประกันการเช่า : </text> <text><?php echo $num['rent_deposit']; ?></text>
+                        <text>เงินประกันการเช่า : </text> <text><?php echo number_format($num['rent_deposit']); ?></text> <text> บาท</text>
                         <br>
-                        <text>ค่าบำรุงการจดทะเบียน	 : </text> <text><?php echo $num['regis_fee']; ?></text>
+                        <text>ค่าบำรุงการจดทะเบียน	 : </text> <text><?php echo number_format($num['regis_fee']); ?></text> <text> บาท</text>
                         <br>                     
-                        <text>ค่าธรรมเนียมสัญญา	: </text> <text><?php echo $num['contract_fee']; ?></text>
+                        <text>ค่าธรรมเนียมสัญญา	: </text> <text><?php echo number_format($num['contract_fee']); ?></text> <text> บาท</text>
                         <br>
-                        <text>ค่าทำสัญญา : </text> <text><?php echo $num['contract_fee2']; ?></text>
+                        <text>ค่าทำสัญญา : </text> <text><?php echo number_format($num['contract_fee2']); ?></text> <text> บาท</text>
                         <br>
-                        <text>ค่าธรรมเนียมสัญญา	: </text> <text><?php echo $num['contract_fee']; ?></text>
+                        <text>ค่าธรรมเนียมสัญญา	: </text> <text><?php echo number_format($num['contract_fee']); ?></text> <text> บาท</text>
                         <br>
-                        <text>ภาษีที่ดิน/ปี	: </text> <text><?php echo $num['land_tax']; ?></text>
+                        <text>ค่าภาษีที่ดิน/ปี	: </text> <text><?php echo number_format($num['land_tax']); ?></text> <text> บาท</text>
                         <br>
-                        <text>ยอดชำระ : </text> <text><?php echo $num['total_pay']; ?></text>
+                        <text>ยอดชำระ : </text> <text><?php echo number_format($num['total_pay']); ?></text> <text> บาท</text>
                         <br>
                         <text>สถานะจ่ายเงิน : </text> <text><?php echo $num['status_pay']; ?></text>
                         <br>

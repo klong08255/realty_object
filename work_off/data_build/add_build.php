@@ -169,7 +169,7 @@
                     <input type="text" class="form-control" id="inputRate" name="rate" required placeholder="กรอกเรตค่าเช่า" value="<?php echo $fetch['rate']; ?>">
                     </div>
                     <div class="form-group col-md-2">
-                    <label>ภาษีที่ดิน/ปี</label>
+                    <label>ค่าภาษีที่ดิน/ปี</label>
                     <input type="number" class="form-control" id="inputLand_tax" name="land_tax" required placeholder="กรอกภาษีที่ดิน/ปี" value="<?php echo $fetch['land_tax']; ?>">
                     </div>
                     <div class="form-group col-md-2">

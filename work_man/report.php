@@ -6,7 +6,7 @@
 
             <div class="card">
                 <div class="card-header" id="bg_hd_card_m2">
-                    <h3 class="font-weight-bold text-center"><b><i class="fas fa-table"></i> ตารางข้อมูลผู้ใช้งานทั้งหมด 👨‍💻</b></h3>
+                    <h3 class="font-weight-bold text-center"><b><i class="fas fa-table"></i> ตารางข้อมูลผู้ใช้งานทั้งหมด </b></h3>
                 </div>
                 <div class="card-body">
                     <table class="table table-striped min-vw-100" id="myTable">

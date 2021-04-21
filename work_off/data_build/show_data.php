@@ -37,7 +37,7 @@
                                         ค่าบำรุงการจดทะเบียน	
                                     </th>
                                     <th>
-                                        ภาษีที่ดิน/ปี
+                                        ค่าภาษีที่ดิน/ปี
                                     </th>
                                     <th>
                                         ค่าธรรมเนียมสัญญา
@@ -46,13 +46,13 @@
                                         ค่าทำสัญญา
                                     </th>
                                     <th>
-                                        ประกันอัคคีภัย
+                                        ค่าประกันอัคคีภัย
                                     </th>
                                     <th>
-                                        ความกว้าง
+                                        ความกว้าง (ตร.ม.)
                                     </th>
                                     <th>
-                                        ความยาว
+                                        ความยาว (ตร.ม.)
                                     </th>
                                     <th>
                                         จำนวนชั้น
@@ -61,10 +61,10 @@
                                         จำนวนคูหา
                                     </th>
                                     <th>
-                                        ประเภท(อาศัย/ร้านค้า)	
+                                        ประเภท (อาศัย/ร้านค้า)	
                                     </th>
                                     <th>
-                                        พื้นที่ใช้สอย
+                                        พื้นที่ใช้สอย (ตร.ม.)
                                     </th>
                                     <th>
                                         เรตค่าเช่า
@@ -118,28 +118,28 @@
                                     <?php echo $num['build_address'];?>
                                 </td>
                                 <td>
-                                    <?php echo $num['rent_month'];?>
+                                    <?php echo number_format($num['rent_month']);?><text> บาท</text>
                                 </td>
                                 <td>
-                                    <?php echo $num['rent_year'];?>
+                                    <?php echo number_format($num['rent_year']);?><text> บาท</text>
                                 </td>
                                 <td>
-                                    <?php echo $num['rent_deposit'];?>
+                                    <?php echo number_format($num['rent_deposit']);?><text> บาท</text>
                                 </td>
                                 <td>
-                                    <?php echo $num['regis_fee'];?>
+                                    <?php echo number_format($num['regis_fee']);?><text> บาท</text>
                                 </td>
                                 <td>
-                                    <?php echo $num['land_tax'];?>
+                                    <?php echo number_format($num['land_tax']);?><text> บาท</text>
                                 </td>
                                 <td>
-                                    <?php echo $num['contract_fee'];?>
+                                    <?php echo number_format($num['contract_fee']);?><text> บาท</text>
                                 </td>
                                 <td>
-                                    <?php echo $num['contract_fee2'];?>
+                                    <?php echo number_format($num['contract_fee2']);?><text> บาท</text>
                                 </td>
                                 <td class="text-nowrap">
-                                    <?php echo $num['insurance_fire'];?>
+                                    <?php echo number_format($num['insurance_fire']);?><text> บาท</text>
                                 </td>
                                 <td>
                                     <?php echo $num['width'];?>
@@ -157,7 +157,7 @@
                                     <?php echo $num['type'];?>
                                 </td>
                                 <td>
-                                    <?php echo $num['use_area'];?>
+                                    <?php echo number_format($num['use_area']);?>
                                 </td>
                                 <td>
                                     <?php echo $num['rate'];?>
@@ -174,7 +174,7 @@
                                 </td>
                                 
                                 <td class="text-nowrap">
-                                    <?php echo number_format($num['total_pay']);?>
+                                    <?php echo number_format($num['total_pay']);?><text> บาท</text>
                                 </td>
                                 <td class="text-nowrap">
                                     <a href="officer.php?p=add_build&id4edit=<?php echo $num['id']; ?>"><button class="btn btn-warning">แก้ไข</button></a>
