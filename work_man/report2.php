@@ -99,7 +99,7 @@
                                     <?php
                                     if($num['status'] =="empty"){
                                     ?>
-                                    <a href="officer.php?p=add_rent"><button class="alert alert-success p-1 w-100">ว่าง</button></a>
+                                    <button class="alert alert-success p-1 w-100">ว่าง</button>
                                     <?php
                                     }else{
                                         $res2 = $insertUser->runQuery("SELECT * FROM people_rent WHERE status_rent='เช่าอยู่' and id_data_build='$num[id]' ");
