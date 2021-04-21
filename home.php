@@ -2,7 +2,7 @@
     $slN = New DB_conn();
 ?>
 <!---------------------------------------- รูปสไลด์ -------------------------------------------------------->
-    <div class="container mt-3 mb-3">
+    <div class="container mt-3 mb-3 ">
                 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
                     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>

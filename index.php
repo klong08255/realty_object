@@ -21,9 +21,9 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 </head>
 <body id="bg_index">
-    <section class="bg- min-vh-100%">
+    <section class="bg-min-vh-100%">
     <!---------------------------------------- ส่วนหัว -------------------------------------------------------->
-        <div class="container-fluid" id="bg_index">
+        <div class="container-fluid " id="bg_index">
                     <div class="row p-2">
     <!---------------------------------------- logo ---------------------------------------------------------->
                         <div class="col-sm-1 col-xs d-flex align-items-center ">
@@ -98,10 +98,7 @@
                         <a href="index.php?p=home" class="ml-2 text-dark btn"><i class="fas fa-home"></i> หน้าแรก</a>
                     </li>
                     <li class="nav-item">
-                        <a href="index.php?p=history" class="ml-2 text-dark btn"><i class="fas fa-book"></i> ประวัติวัดนครสวรรค์</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="index.php?p=rent_data" class="ml-2 text-dark btn"><i class="fas fa-database"></i> ข้อมูลการเช่า</a>
+                        <a href="index.php?p=rent_data" class="ml-2 text-dark btn"><i class="fas fa-file-alt"></i> เอกสารที่ต้องใช้</a>
                     </li>
                     <li class="nav-item">
                         <a href="index.php?p=all_news" class="ml-2 text-dark btn"><i class="fas fa-newspaper"></i> ข่าวทั้งหมด</a>
@@ -125,9 +122,6 @@
                 break;
                 case "contact":
                     include_once('contact.php');
-                break;
-                case "history":
-                    include_once('history.php');
                 break;
                 case "rent_data":
                     include_once('rentaldata.php');

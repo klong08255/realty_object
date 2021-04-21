@@ -16,18 +16,6 @@
                     </div>
                     <div class="col"></div>
                 </div>
-    <!----------------------------------------ส่วน eamil ---------------------------------------------------
-                <div class="row">
-                    <div class="col"></div>
-                    <div class="col-2 text-right">
-                        <P>E-mail :</P>
-                    </div>
-                    <div class="col-9">
-                        <P>noppakao.t@nsru.ac.th</P>
-                    </div>
-                    <div class="col"></div>
-                </div>
-                ->
     <!--------------------------------------- ส่วนของเบอร์ --------------------------------------------------------------->            
                 <div class="row">
                     <div class="col"></div>
