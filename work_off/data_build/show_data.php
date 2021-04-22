@@ -177,10 +177,10 @@
                                     <?php echo number_format($num['total_pay']);?><text> บาท</text>
                                 </td>
                                 <td class="text-nowrap">
-                                    <a href="officer.php?p=add_build&id4edit=<?php echo $num['id']; ?>"><button class="btn btn-warning">แก้ไข</button></a>
+                                    <a href="officer.php?p=add_build&id4edit=<?php echo $num['id']; ?>"><button class="btn btn-warning text-light">แก้ไข</button></a>
 
                                     <a href="officer.php?p=data_build&id4del=<?php echo $num['id']; ?>&del=chk">
-                                    <button class="btn btn-danger">ลบ</button>
+                                    <button class="btn btn-danger text-light">ลบ</button>
                                     </a>
                                     
                                 </td>

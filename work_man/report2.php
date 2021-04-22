@@ -114,28 +114,28 @@
                                     <?php echo $num['build_address'];?>
                                 </td>
                                 <td>
-                                    <?php echo number_format($num['rent_month']);?>
+                                    <?php echo number_format($num['rent_month']);?><text> บาท</text>
                                 </td>
                                 <td>
-                                    <?php echo number_format($num['rent_year']);?>
+                                    <?php echo number_format($num['rent_year']);?><text> บาท</text>
                                 </td>
                                 <td>
-                                    <?php echo number_format($num['rent_deposit']);?>
+                                    <?php echo number_format($num['rent_deposit']);?><text> บาท</text>
                                 </td>
                                 <td>
-                                    <?php echo number_format($num['regis_fee']);?>
+                                    <?php echo number_format($num['regis_fee']);?><text> บาท</text>
                                 </td>
                                 <td>
-                                    <?php echo number_format($num['land_tax']);?>
+                                    <?php echo number_format($num['land_tax']);?><text> บาท</text>
                                 </td>
                                 <td>
-                                    <?php echo number_format($num['contract_fee']);?>
+                                    <?php echo number_format($num['contract_fee']);?><text> บาท</text>
                                 </td>
                                 <td>
-                                    <?php echo number_format($num['contract_fee2']);?>
+                                    <?php echo number_format($num['contract_fee2']);?><text> บาท</text>
                                 </td>
                                 <td class="text-nowrap">
-                                    <?php echo number_format($num['insurance_fire']);?>
+                                    <?php echo number_format($num['insurance_fire']);?><text> บาท</text>
                                 </td>
                                 <td>
                                     <?php echo $num['width'];?>
@@ -170,7 +170,7 @@
                                 </td>
                                 
                                 <td class="text-nowrap">
-                                    <?php echo number_format($num['total_pay']);?>
+                                    <?php echo number_format($num['total_pay']);?><text> บาท</text>
                                 </td>
                                 
                             </tr>

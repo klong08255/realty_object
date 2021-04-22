@@ -140,11 +140,11 @@
                         <td>
 
                             <a href="officer.php?p=view_rent&id4view=<?php echo $num['id_rent']; ?>"
-                                class="btn btn-primary">View</a>
+                                class="btn btn-primary text-light">ดูข้อมูล</a>
                             <a href="officer.php?p=add_rent&id4edit=<?php echo $num['id_rent']; ?>"
-                                class="btn btn-warning">Edit</a>
+                                class="btn btn-warning text-light">แก้ไข</a>
                             <a href="officer.php?p=show_rent_mange&del=chk&id4del=<?php echo $num['id_rent']; ?>"
-                                class="btn btn-danger">Delete</a>
+                                class="btn btn-danger text-light">ลบ</a>
                         </td>
 
                     </tr>

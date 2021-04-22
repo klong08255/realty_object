@@ -9,8 +9,7 @@
 
             <div class="card">
                 <div class="card-header text-center ">
-                    <h3 class="font-weight-bold"><i class="fas fa-folder-open"></i> ข้อมูลการเช่าอาคารอสังหาริมทรัพย์
-                    </h3>
+                    <h3 class="font-weight-bold"><i class="fas fa-folder-open"></i>  ข้อมูลการเช่าอาคารอสังหาริมทรัพย์</h3>
                 </div>
                 <div class="card-body">
                     <?php
@@ -25,13 +24,13 @@
                     ?>
                     <div class="text-right" id="hideInPagePrint">
 
-                        <button class="btn btn-primary ml-2" id="printPage">Print</button>
+                        <button class="btn btn-primary ml-2" id="printPage"><i class="fas fa-print"></i> พิมพ์</button>
                     </div>
                     <hr>
                     <!-- แก้ กง งี้ -->
 
 
-                    <H3 class="font-weight-bold text-success">ข้อมูลส่วนตัวผู้เช่า</H3>
+                    <H3 class="font-weight-bold text-success"><i class="fas fa-address-card"></i> ข้อมูลส่วนตัวผู้เช่า</H3>
                     <div class="alert alert-success font-weight-bold">
 
                         <text>สถานะการเช่า : </text><?php if($num['status_rent'] =="เช่าอยู่"){ ?><text
@@ -55,7 +54,7 @@
                         <text>โทรศัพท์ : </text> <text><?php echo $num['phone_number']; ?></text>
                     </div>
                     <hr>
-                    <H3 class="font-weight-bold text-success">ข้อมูลการเช่า</H3>
+                    <H3 class="font-weight-bold text-success"><i class="far fa-folder"></i> ข้อมูลการเช่า</H3>
                     <div class="alert alert-success font-weight-bold m-0">
                         <text>เช่าบ้านเลขที่ : </text> <text><?php echo $num['build_address']; ?></text>
                         <br>
@@ -71,25 +70,25 @@
                         <br>
                         <text>ประเภท (อาศัย/ร้านค้า) : </text> <text><?php echo $num['type']; ?></text>
                         <br>
-                        <text>พื้นที่ใช้สอย : </text> <text><?php echo $num['use_area']; ?></text>
+                        <text>พื้นที่ใช้สอย : </text> <text><?php echo number_format($num['use_area']); ?></text> <text> ตร.ม.</text>
                         <br>
                         <text>ค่าเช่า/เดือน : </text> <text><?php echo number_format($num['rent_month']) ; ?></text> <text> บาท</text>
                         <br>
-                        <text>ค่าเช่า/ปี : </text> <text><?php echo number_format($num['rent_year']) ; ?></text>
+                        <text>ค่าเช่า/ปี : </text> <text><?php echo number_format($num['rent_year']) ; ?></text> <text> บาท</text>
                         <br>
-                        <text>เงินประกันการเช่า : </text> <text><?php echo $num['rent_deposit']; ?></text>
+                        <text>เงินประกันการเช่า : </text> <text><?php echo number_format($num['rent_deposit']); ?></text> <text> บาท</text>
                         <br>
-                        <text>ค่าบำรุงการจดทะเบียน	 : </text> <text><?php echo $num['regis_fee']; ?></text>
+                        <text>ค่าบำรุงการจดทะเบียน	 : </text> <text><?php echo number_format($num['regis_fee']); ?></text> <text> บาท</text>
                         <br>                     
-                        <text>ค่าธรรมเนียมสัญญา	: </text> <text><?php echo $num['contract_fee']; ?></text>
+                        <text>ค่าธรรมเนียมสัญญา	: </text> <text><?php echo number_format($num['contract_fee']); ?></text> <text> บาท</text>
                         <br>
-                        <text>ค่าทำสัญญา : </text> <text><?php echo $num['contract_fee2']; ?></text>
+                        <text>ค่าทำสัญญา : </text> <text><?php echo number_format($num['contract_fee2']); ?></text> <text> บาท</text>
                         <br>
-                        <text>ค่าธรรมเนียมสัญญา	: </text> <text><?php echo $num['contract_fee']; ?></text>
+                        <text>ค่าธรรมเนียมสัญญา	: </text> <text><?php echo number_format($num['contract_fee']); ?></text> <text> บาท</text>
                         <br>
-                        <text>ภาษีที่ดิน/ปี	: </text> <text><?php echo $num['land_tax']; ?></text>
+                        <text>ค่าภาษีที่ดิน/ปี	: </text> <text><?php echo number_format($num['land_tax']); ?></text> <text> บาท</text>
                         <br>
-                        <text>ยอดชำระ : </text> <text><?php echo $num['total_pay']; ?></text>
+                        <text>ยอดชำระ : </text> <text><?php echo number_format($num['total_pay']); ?></text> <text> บาท</text>
                         <br>
                         <text>สถานะจ่ายเงิน : </text> <text><?php echo $num['status_pay']; ?></text>
                         <br>

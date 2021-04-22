@@ -28,7 +28,7 @@
                                 if($num['status_rent'] =="เช่าอยู่"){
                             ?>
                         <a href="officer.php?p=view_rent&id4view=<?php echo $_GET['id4view']; ?>&cancelPromise=ok"
-                            id="btnCancelPromiseRent" class="btn btn-warning">ยกเลิกสัญญาเช่า</a>
+                            id="btnCancelPromiseRent" class="btn btn-warning text-light"><i class="fas fa-stop"></i> ยกเลิกสัญญาเช่า</a>
                         <?php
                             }elseif($num['status_rent'] =="ยกเลิกสัญญาเช่า"){
                                 $res2 = $select4thispage->runQuery("SELECT * FROM data_build WHERE id='$num[id]' ");
@@ -36,19 +36,19 @@
                                 if($num2['status'] =="empty"){
                                 ?>
                         <a href="officer.php?p=view_rent&id4view=<?php echo $_GET['id4view']; ?>&doPromiseAgain=ok"
-                            id="btnDoPromiseRentAgain" class="btn btn-success">ต่อสัญญาเช่า</a>
+                            id="btnDoPromiseRentAgain" class="btn btn-success"><i class="fas fa-play"></i> ต่อสัญญาเช่า</a>
                         <?php
                                 }
                             }
                             ?>
 
-                        <button class="btn btn-primary ml-2" id="printPage">Print</button>
+                        <button class="btn btn-primary ml-2" id="printPage"><i class="fas fa-print"></i> พิมพ์</button>
                     </div>
                     <hr>
                     <!-- แก้ กง งี้ -->
 
 
-                    <H3 class="font-weight-bold text-success">ข้อมูลส่วนตัวผู้เช่า</H3>
+                    <H3 class="font-weight-bold text-success"><i class="fas fa-address-card"></i> ข้อมูลส่วนตัวผู้เช่า</H3>
                     <div class="alert alert-success font-weight-bold">
 
                         <text>สถานะการเช่า : </text><?php if($num['status_rent'] =="เช่าอยู่"){ ?><text
@@ -72,7 +72,7 @@
                         <text>โทรศัพท์ : </text> <text><?php echo $num['phone_number']; ?></text>
                     </div>
                     <hr>
-                    <H3 class="font-weight-bold text-success">ข้อมูลการเช่า</H3>
+                    <H3 class="font-weight-bold text-success"><i class="far fa-folder"></i> ข้อมูลการเช่า</H3>
                     <div class="alert alert-success font-weight-bold m-0">
                         <text>เช่าบ้านเลขที่ : </text> <text><?php echo $num['build_address']; ?></text>
                         <br>

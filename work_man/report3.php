@@ -137,7 +137,7 @@
                         <td>
 
                             <a href="manager.php?p=view_rent&id4view=<?php echo $num['id_rent']; ?>"
-                                class="btn btn-primary w-100">View</a>
+                                class="btn btn-primary w-100">ดูข้อมูล</a>
                             
                         </td>
 
