@@ -24,9 +24,7 @@
                                     <th>
                                         ที่อยู่ของอาคาร
                                     </th>
-                                    <th>
-                                        ค่าเช่า/เดือน
-                                    </th>
+                                    
                                     <th>
                                         ค่าเช่า/ปี
                                     </th>
@@ -48,12 +46,7 @@
                                     <th>
                                         ค่าประกันอัคคีภัย
                                     </th>
-                                    <th>
-                                        ความกว้าง (ตร.ม.)
-                                    </th>
-                                    <th>
-                                        ความยาว (ตร.ม.)
-                                    </th>
+                                    
                                     <th>
                                         จำนวนชั้น
                                     </th>
@@ -61,10 +54,10 @@
                                         จำนวนคูหา
                                     </th>
                                     <th>
-                                        ประเภท (อาศัย/ร้านค้า)	
+                                        พื้นที่ใช้สอย (ตร.ม.)
                                     </th>
                                     <th>
-                                        พื้นที่ใช้สอย (ตร.ม.)
+                                        ประเภท (อาศัย/ร้านค้า)	
                                     </th>
                                     <th>
                                         เรตค่าเช่า
@@ -117,9 +110,7 @@
                                 <td>
                                     <?php echo $num['build_address'];?>
                                 </td>
-                                <td>
-                                    <?php echo number_format($num['rent_month']);?><text> บาท</text>
-                                </td>
+                                
                                 <td>
                                     <?php echo number_format($num['rent_year']);?><text> บาท</text>
                                 </td>
@@ -141,12 +132,7 @@
                                 <td class="text-nowrap">
                                     <?php echo number_format($num['insurance_fire']);?><text> บาท</text>
                                 </td>
-                                <td>
-                                    <?php echo $num['width'];?>
-                                </td>
-                                <td>
-                                    <?php echo $num['lenght'];?>
-                                </td>
+                                
                                 <td>
                                     <?php echo $num['numb_layer'];?>
                                 </td>
@@ -154,10 +140,10 @@
                                     <?php echo $num['numb_row'];?>
                                 </td>
                                 <td>
-                                    <?php echo $num['type'];?>
+                                    <?php echo number_format($num['use_area']);?>
                                 </td>
                                 <td>
-                                    <?php echo number_format($num['use_area']);?>
+                                    <?php echo $num['type'];?>
                                 </td>
                                 <td>
                                     <?php echo $num['rate'];?>

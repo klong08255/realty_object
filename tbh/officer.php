@@ -60,11 +60,6 @@
             <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
                 <div class="sb-sidenav-menu">
                     <div class="nav">
-                        <a class="nav-link collapsed" href="officer.php?p=showMember" data-target="#collapseLayouts"
-                            aria-expanded="false" aria-controls="collapseLayouts">
-                            <div class="sb-nav-link-icon "><i class="fas fa-user-cog"></i></div>
-                            จัดการผู้ใช้งาน
-                        </a>
                         <a class="nav-link collapsed" href="officer.php?p=p1" data-target="#collapseLayouts"
                             aria-expanded="false" aria-controls="collapseLayouts">
                             <div class="sb-nav-link-icon "><i class="fas fa-newspaper"></i></div>
@@ -92,7 +87,7 @@
 
                     <!--------------------------------------- ดึงค่า --------------------------------------------------->
                     <?php 
-                switch ($_GET['p']){
+                        switch ($_GET['p']){
             //*ข่าว
                     case 'p1' :{
                         include_once('../work_off/news/manage_news.php');
@@ -105,20 +100,7 @@
                     case 'p3_edit_news' :{
                         include_once('../work_off/news/editnews.php');
                     break;
-                    }
-            //*เพิ่มผู้ใช้
-                    case 'p4' :{
-                        include_once('../work_off/adduser/manage_user.php');
-                    break;
-                    }
-                    case 'adduser' :{
-                        include_once('../work_off/adduser/addUser.php');
-                    break;
-                    }          
-                    case 'showMember' :{
-                        include_once('../work_off/adduser/showMember.php');
-                    break;
-                    }   
+                    }  
             //*เช่า
                     case 'data_build' :{
                         include_once('../work_off/data_build/show_data.php');

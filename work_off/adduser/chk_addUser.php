@@ -53,7 +53,7 @@ $(document).ready(function() {
         showConfirmButton: false,
         timer: 2000
     }).then(function(){
-        window.location.href='../../tbh/officer.php?p=showMember';
+        window.location.href='../../tbh/admin.php?p=showMember';
     })
 });
 </script>

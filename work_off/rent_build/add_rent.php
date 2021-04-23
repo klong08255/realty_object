@@ -84,6 +84,12 @@
                         <label>วันที่ครบกำหนด</label>
                         <input type="date" class="form-control" id="input" name="datestop_rent" required>
                         </div>
+                        <div class="form-group col-md-2">
+                        <label>หลักฐานการจ่ายเงิน</label>
+                        <input type="" class="form-control" id="input" name="datestop_rent" required>
+                        </div>
+                        
+                    
                     </div>
 
                 <div class="text-right">
@@ -180,6 +186,12 @@
                         <div class="form-group col-md-2">
                         <label>วันที่ครบกำหนด</label>
                         <input type="date" class="form-control" id="input" name="datestop_rent" required value="<?php echo $fetch['datestop_rent'];?>">
+                        </div>
+                        <div class="form-group col-md-2">
+                        <label> <b>รูปประกอบข่าวประชาสัมพันธ์เดิม :</b> </label><br>
+                        <img style="width:350px; border:2px solid green;" src="../image/news/<?php echo $numS['news_cover']; ?>" alt=""><br><br>
+                        <label class="d-inline"> <b>เลือกรูปภาพใหม่ :</b> </label>
+                        <input class="d-inline" type="file" class="form-control-file w-50" name="newsC">
                         </div>
                     </div>
 

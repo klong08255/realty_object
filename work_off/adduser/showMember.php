@@ -3,7 +3,7 @@
                 $insertUser = new queryData();
             ?>
 
-            <div class="d-flex justify-content-end mb-2"><a href="officer.php?p=adduser"
+            <div class="d-flex justify-content-end mb-2"><a href="admin.php?p=adduser"
                     class="btn btn-success">เพิ่มผู้ใช้งานใหม่ <i class="fas fa-plus-circle"></i></a></div>
 
             <div class="card">
@@ -11,7 +11,7 @@
                     <h3 class="font-weight-bold text-center"><b><i class="fas fa-table"></i> ตารางจัดการผู้ใช้งานทั้งหมด</b></h3>
                 </div>
                 <div class="card-body">
-                    <table class="table table-striped min-vw-100" id="myTable">
+                    <table class="table table-striped w-100" id="myTable">
                         <thead class="text-center alert alert-success">
                             <tr id="bg_hd_table_m">
                                 <th scope="col">ลำดับ</th>
@@ -42,7 +42,7 @@
                                     <?php echo $num['username'];?>
                                 </td>
                                 <td>
-                                    <?php echo md5($num['password']);?>
+                                    <?php echo ($num['password']);?>
                                 </td>
                                 <td>
                                     <?php echo $num['title_name']." ".$num['first_name']." ".$num['last_name'];?>
@@ -57,9 +57,9 @@
                                     <?php echo $num['user_level'];?>
                                 </td>
                                 <td>
-                                    <a href="officer.php?p=adduser&id4edit=<?php echo $num['id']; ?>"
+                                    <a href="admin.php?p=adduser&id4edit=<?php echo $num['id']; ?>"
                                         class="btn btn-warning text-light">แก้ไข <i class="fas fa-edit"></i></a>
-                                    <a href="officer.php?p=showMember&del=chk&id4del=<?php echo $num['id']; ?>"
+                                    <a href="admin.php?p=showMember&del=chk&id4del=<?php echo $num['id']; ?>"
                                         class="btn btn-danger text-light">ลบ <i class="fas fa-trash-alt"></i></a>
                                 </td>
                             </tr>
@@ -106,9 +106,9 @@
                     cancelButtonText: 'ไม่ต้องการ'
                 }).then((result) => {
                     if (result.isConfirmed) {
-                        window.location.href = 'officer.php?p=showMember&chkDel=ok&id4del=<?php echo $id4del; ?>';
+                        window.location.href = 'admin.php?p=showMember&chkDel=ok&id4del=<?php echo $id4del; ?>';
                     } else {
-                        window.location.href = 'officer.php?p=showMember';
+                        window.location.href = 'admin.php?p=showMember';
                     }
                 })
             });
@@ -129,7 +129,7 @@
                 showConfirmButton: false,
                 timer:'2000'
             }).then(function(){
-                window.location.href = 'officer.php?p=showMember';
+                window.location.href = 'admin.php?p=showMember';
             });
             </script>
             <?php

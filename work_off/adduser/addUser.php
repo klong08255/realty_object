@@ -1,4 +1,4 @@
-<div class="d-flex justify-content-start mb-2"><a href="officer.php?p=showMember" class = "btn btn-primary"><i class="fas fa-arrow-circle-left"></i> ย้อนกลับ</a></div>
+<div class="d-flex justify-content-start mb-2"><a href="admin.php?p=showMember" class = "btn btn-primary"><i class="fas fa-arrow-circle-left"></i> ย้อนกลับ</a></div>
 
         <?php
             if(!isset($_GET['id4edit'])){

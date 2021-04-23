@@ -56,6 +56,9 @@
                             สถานะจ่ายเงิน
                         </th>
                         <th>
+                            หลักฐานการจ่ายเงิน
+                        </th>
+                        <th>
                             จัดการข้อมูล
                         </th>
                     </tr>
@@ -136,6 +139,9 @@
                         </td>
                         <td>
                             <?php echo$num['status_pay']; ?>
+                        </td>
+                        <td>
+                            <?php echo$num['evidence_pay']; ?>
                         </td>
                         <td>
 

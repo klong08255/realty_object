@@ -34,7 +34,7 @@
                         },
                         function(isConfirm){
                         if (isConfirm) {
-                            window.location.href = 'tbh/admin.php';
+                            window.location.href = 'tbh/admin.php?p=showMember';
                         }
                         }); }, 1000);";
                 echo"</script>";
@@ -67,7 +67,7 @@
                         },
                         function(isConfirm){
                         if (isConfirm) {
-                            window.location.href = 'tbh/officer.php?p=showMember';
+                            window.location.href = 'tbh/officer.php?p=p1';
                         }
                         }); }, 1000);";
                 echo"</script>";

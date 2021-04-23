@@ -42,18 +42,11 @@
                     <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion" >
                         <div class="sb-sidenav-menu">
                             <div class="nav">
-                                <a class="nav-link collapsed" href=""  data-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
-                                    <div class="sb-nav-link-icon "><i class="fas fa-user-plus"></i></div>
-                                    เพิ่มข้อมูล
-                                </a>
-                                <a class="nav-link collapsed" href=""  data-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
-                                    <div class="sb-nav-link-icon "><i class="fas fa-user-edit"></i></div>
-                                    แก้ไขข้อมูล
-                                </a>
-                                <a class="nav-link collapsed" href=""  data-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
-                                    <div class="sb-nav-link-icon "><i class="fas fa-user-times"></i></div>
-                                    ลบไขข้อมูล
-                                </a>      
+                            <a class="nav-link collapsed" href="admin.php?p=showMember" data-target="#collapseLayouts"
+                            aria-expanded="false" aria-controls="collapseLayouts">
+                            <div class="sb-nav-link-icon "><i class="fas fa-user-cog"></i></div>
+                            จัดการผู้ใช้งาน
+                        </a>    
                             
                             
                             </div>
@@ -65,12 +58,31 @@
                 <main>
                     <div class="container-fluid">
                         <br>
-                        <div class="alert alert-info" role="alert">
-                        ตาราง
-                        </div>
-        
-<div class="container">
-</div>
+
+            <?php 
+                        switch ($_GET['p']){
+            
+            //*เพิ่มผู้ใช้
+                    case 'p4' :{
+                        include_once('../work_off/adduser/manage_user.php');
+                    break;
+                    }
+                    case 'adduser' :{
+                        include_once('../work_off/adduser/addUser.php');
+                    break;
+                    }          
+                    case 'showMember' :{
+                        include_once('../work_off/adduser/showMember.php');
+                    break;
+                    }   
+            
+                }
+            ?>
+
+            </div>
+                    </div>
+                        
+                    
                 
             
         <script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
