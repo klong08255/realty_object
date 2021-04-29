@@ -44,15 +44,12 @@
                         <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion" >
                             <div class="sb-sidenav-menu">
                                 <div class="nav">
+                                    
                                     <a class="nav-link collapsed" href="manager.php?p=1"  data-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
-                                        <div class="sb-nav-link-icon "><i class="fas fa-file"></i></div>
-                                        ตารางข้อมูลผู้ใช้งานทั้งหมด
-                                    </a>
-                                    <a class="nav-link collapsed" href="manager.php?p=2"  data-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
                                         <div class="sb-nav-link-icon "><i class="fas fa-file"></i></div>
                                         ตารางข้อมูลอาคารอสังหาริมทรัพย์
                                     </a>
-                                    <a class="nav-link collapsed" href="manager.php?p=3"  data-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+                                    <a class="nav-link collapsed" href="manager.php?p=2"  data-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
                                         <div class="sb-nav-link-icon "><i class="fas fa-file"></i></div>
                                         ตารางข้อมูลการเช่าอาคารอสังหาริมทรัพย์
                                     </a>      
@@ -70,17 +67,13 @@
             <?php 
                     switch ($_GET['p']){
                         case 1 :{
-                            include_once('../work_man/report.php');
+                            include_once('../work_man/report1.php');
                         break;
                         }                       
                         case 2 :{
                             include_once('../work_man/report2.php');
                         break;
                         }    
-                        case 3 :{
-                            include_once('../work_man/report3.php');
-                        break;
-                        }  
                         case 'view_rent' :{
                             include_once('../work_man/view_rent.php');
                         break;

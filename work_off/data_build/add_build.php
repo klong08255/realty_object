@@ -16,11 +16,11 @@
                     <textarea  class="form-control" id="inputBuild_address" name="build_address" required></textarea> 
                     </div>
                     <div class="form-group col-md-2">
-                    <label>ความกว้าง (ตร.ม.)</label>
+                    <label>ความกว้าง (ม.)</label>
                     <input type="number" class="form-control" id="inputWidth" name="width" required placeholder="กรอกความกว้าง">
                     </div>
                     <div class="form-group col-md-2">
-                    <label>ความยาว (ตร.ม.)</label>
+                    <label>ความยาว (ม.)</label>
                     <input type="number" class="form-control" id="inputLenght" name="lenght" required placeholder="กรอกความยาว">
                     </div>
                     <div class="form-group col-md-2">
@@ -139,11 +139,11 @@
                     </select>
                     </div>
                     <div class="form-group col-md-2">
-                    <label>ความกว้าง</label>
+                    <label>ความกว้าง (ม.)</label>
                     <input type="number" class="form-control" id="inputWidth" name="width" required placeholder="กรอกความกว้าง" value="<?php echo $fetch['width']; ?>">
                     </div>
                     <div class="form-group col-md-2">
-                    <label>ความยาว</label>
+                    <label>ความยาว (ม.)</label>
                     <input type="number" class="form-control" id="inputLenght" name="lenght" required placeholder="กรอกความยาว" value="<?php echo $fetch['lenght']; ?>">
                     </div>
                 </div>    
