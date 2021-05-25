@@ -9,12 +9,12 @@
             </div>
             <div class="card-body"> 
         
-                <form class="jumbotron" action="../work_off/rent_build/chk_add.php" method="post">
+                <form class="jumbotron" action="../work_off/rent_build/chk_add.php" method="post" enctype="multipart/form-data" >
                     <div class="form-row">
                         
                         <div class="form-group col-md-4">
                             <label for="inputState">เลือกอาคารที่ต้องการเช่า</label>
-                                <select id="inputState" class="form-control" name="type" required placeholder="เลือก">
+                                <select id="" class="form-control" name="type" required placeholder="เลือก">
                                 
                                                 <option selected value="">----:: โปรดเลือกอาคารที่ต้องการเช่า ::----</option>
 
@@ -84,9 +84,9 @@
                         <label>วันที่ครบกำหนด</label>
                         <input type="date" class="form-control" id="input" name="datestop_rent" required>
                         </div>
-                        <div class="form-group col-md-2">
-                        <label>หลักฐานการจ่ายเงิน</label>
-                        <input type="" class="form-control" id="input" name="datestop_rent" required>
+                        <div id="show_img" class="form-group col-md-2 " >
+                        <label>ภาพหลักฐานการจ่ายเงิน</label>
+                        <input type="file" class="" id="img" name="slip_receipt" required>
                         </div>
                         
                     
@@ -129,7 +129,7 @@
             </div>
             <div class="card-body"> 
         
-                <form class="jumbotron" action="../work_off/rent_build/chk_edit.php" method="post">
+                <form class="jumbotron" action="../work_off/rent_build/chk_edit.php" method="post" enctype="multipart/form-data" >
                     <input type="text" name="id4edit" value="<?php echo $fetch['id_rent'];?>" hidden="true">
                     <input type="text" name="id4data_b" value="<?php echo $fetch['id'];?>" hidden="true">
                     <div class="form-row">
@@ -187,16 +187,14 @@
                         <label>วันที่ครบกำหนด</label>
                         <input type="date" class="form-control" id="input" name="datestop_rent" required value="<?php echo $fetch['datestop_rent'];?>">
                         </div>
-                        <div class="form-group col-md-2">
-                        <label> <b>รูปประกอบข่าวประชาสัมพันธ์เดิม :</b> </label><br>
-                        <img style="width:350px; border:2px solid green;" src="../image/news/<?php echo $numS['news_cover']; ?>" alt=""><br><br>
-                        <label class="d-inline"> <b>เลือกรูปภาพใหม่ :</b> </label>
-                        <input class="d-inline" type="file" class="form-control-file w-50" name="newsC">
+                        <div id="show_img" class="form-group col-md-2 ">
+                        <label>ภาพหลักฐานการจ่ายเงิน</label>
+                        <input type="file" class="" id="img" name="slip_receipt" required>
                         </div>
                     </div>
 
                 <div class="text-right">
-                    <button type="reset" class="btn btn-warning">Reset</button>
+                    <button  type="reset" class="btn btn-warning">Reset</button>
                     <button type="submit" class="btn btn-success" name="submit">แก้ไขข้อมูลข้อมูลการเช่า</button>
                 </div>
                 <!-- แก้กงงี้ -->
@@ -217,3 +215,22 @@
             
     }
     ?>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+    
+        $("#inputState").change(()=>{
+           
+                if($("#inputState").val() == "ยังไม่ชำระ"){
+                    $("#show_img").attr('hidden', true)
+                    $("#img").attr('type', '')
+                    $("#img").attr('required', false)
+                }
+                if($("#inputState").val() == "ชำระแล้ว"){
+                    $("#show_img").attr('hidden', false)
+                    $("#img").attr('type', 'file')
+                    $("#img").attr('required', true)
+                }
+        
+        })
+    </script>

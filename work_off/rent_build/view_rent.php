@@ -28,7 +28,8 @@
                                 if($num['status_rent'] =="เช่าอยู่"){
                             ?>
                         <a href="officer.php?p=view_rent&id4view=<?php echo $_GET['id4view']; ?>&cancelPromise=ok"
-                            id="btnCancelPromiseRent" class="btn btn-warning text-light"><i class="fas fa-stop"></i> ยกเลิกสัญญาเช่า</a>
+                            id="btnCancelPromiseRent" class="btn btn-warning text-light"><i class="fas fa-stop"></i>
+                            ยกเลิกสัญญาเช่า</a>
                         <?php
                             }elseif($num['status_rent'] =="ยกเลิกสัญญาเช่า"){
                                 $res2 = $select4thispage->runQuery("SELECT * FROM data_build WHERE id='$num[id]' ");
@@ -36,7 +37,8 @@
                                 if($num2['status'] =="empty"){
                                 ?>
                         <a href="officer.php?p=view_rent&id4view=<?php echo $_GET['id4view']; ?>&doPromiseAgain=ok"
-                            id="btnDoPromiseRentAgain" class="btn btn-success"><i class="fas fa-play"></i> ต่อสัญญาเช่า</a>
+                            id="btnDoPromiseRentAgain" class="btn btn-success"><i class="fas fa-play"></i>
+                            ต่อสัญญาเช่า</a>
                         <?php
                                 }
                             }
@@ -48,7 +50,8 @@
                     <!-- แก้ กง งี้ -->
 
 
-                    <H3 class="font-weight-bold text-success"><i class="fas fa-address-card"></i> ข้อมูลส่วนตัวผู้เช่า</H3>
+                    <H3 class="font-weight-bold text-success"><i class="fas fa-address-card"></i> ข้อมูลส่วนตัวผู้เช่า
+                    </H3>
                     <div class="alert alert-success font-weight-bold">
 
                         <text>สถานะการเช่า : </text><?php if($num['status_rent'] =="เช่าอยู่"){ ?><text
@@ -82,7 +85,7 @@
                         <br>
                         <text>เลขประกันภัย : </text> <text><?php echo $num['number_insurance']; ?></text>
                         <br>
-                        <text>วันที่เริ่มประกัน	: </text> <text><?php echo $num['date_insurance']; ?></text>
+                        <text>วันที่เริ่มประกัน : </text> <text><?php echo $num['date_insurance']; ?></text>
                         <br>
                         <text>วันหมดประกัน : </text> <text><?php echo $num['date_insurance_stop']; ?></text>
                         <br>
@@ -90,45 +93,74 @@
                         <br>
                         <text>พื้นที่ใช้สอย : </text> <text><?php echo $num['use_area']; ?></text> <text> ตร.ม.</text>
                         <br>
-                        <text>ค่าเช่า/เดือน : </text> <text><?php echo number_format($num['rent_month']) ; ?></text> <text> บาท</text>
+                        <text>ค่าเช่า/เดือน : </text> <text><?php echo number_format($num['rent_month']) ; ?></text>
+                        <text> บาท</text>
                         <br>
-                        <text>ค่าเช่า/ปี : </text> <text><?php echo number_format($num['rent_year']) ; ?></text> <text> บาท</text>
+                        <text>ค่าเช่า/ปี : </text> <text><?php echo number_format($num['rent_year']) ; ?></text> <text>
+                            บาท</text>
                         <br>
-                        <text>เงินประกันการเช่า : </text> <text><?php echo number_format($num['rent_deposit']); ?></text> <text> บาท</text>
+                        <text>เงินประกันการเช่า : </text>
+                        <text><?php echo number_format($num['rent_deposit']); ?></text> <text> บาท</text>
                         <br>
-                        <text>ค่าบำรุงการจดทะเบียน	 : </text> <text><?php echo number_format($num['regis_fee']); ?></text> <text> บาท</text>
-                        <br>                     
-                        <text>ค่าธรรมเนียมสัญญา	: </text> <text><?php echo number_format($num['contract_fee']); ?></text> <text> บาท</text>
+                        <text>ค่าบำรุงการจดทะเบียน : </text>
+                        <text><?php echo number_format($num['regis_fee']); ?></text> <text> บาท</text>
                         <br>
-                        <text>ค่าทำสัญญา : </text> <text><?php echo number_format($num['contract_fee2']); ?></text> <text> บาท</text>
+                        <text>ค่าธรรมเนียมสัญญา : </text>
+                        <text><?php echo number_format($num['contract_fee']); ?></text> <text> บาท</text>
                         <br>
-                        <text>ค่าธรรมเนียมสัญญา	: </text> <text><?php echo number_format($num['contract_fee']); ?></text> <text> บาท</text>
+                        <text>ค่าทำสัญญา : </text> <text><?php echo number_format($num['contract_fee2']); ?></text>
+                        <text> บาท</text>
                         <br>
-                        <text>ค่าภาษีที่ดิน/ปี	: </text> <text><?php echo number_format($num['land_tax']); ?></text> <text> บาท</text>
+                        <text>ค่าธรรมเนียมสัญญา : </text>
+                        <text><?php echo number_format($num['contract_fee']); ?></text> <text> บาท</text>
                         <br>
-                        <text>ยอดชำระ : </text> <text><?php echo number_format($num['total_pay']); ?></text> <text> บาท</text>
+                        <text>ค่าภาษีที่ดิน/ปี : </text> <text><?php echo number_format($num['land_tax']); ?></text>
+                        <text> บาท</text>
+                        <br>
+                        <text>ยอดชำระ : </text> <text><?php echo number_format($num['total_pay']); ?></text> <text>
+                            บาท</text>
                         <br>
                         <text>สถานะจ่ายเงิน : </text> <text><?php echo $num['status_pay']; ?></text>
                         <br>
-                        
+
 
                     </div>
-                </div>
-            </div>
+                    <hr>
+                    <H3 class="font-weight-bold text-success"> หลักฐานการชำระเงิน</H3>
+                    <div class="alert alert-success font-weight-bold m-0">
+                        <div class="row">
+                            <div class="col-12 col-md-6">
+                                <?php
+                                    if ($num['evidence_pay'] == "-"){
+                                        echo "ยังไม่ได้ชำระเงิน";
+                                    }else{
 
-            <?php
+                                ?>
+                                <img class="w-100" src="../image/slip_chk/<?=$num['evidence_pay']; ?>" alt="">
+                                <?php
+                                    }
+                                    ?>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <!--ปิด card body  -->
+
+                <?php
                 }
 ?>
 
 
-            <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+                <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
-            
-            <script>
-                $("#printPage").click(function(){
+
+                <script>
+                $("#printPage").click(function() {
                     window.print();
                 })
-            </script>
+                </script>
 
 
 
@@ -141,7 +173,7 @@
 
 
 
-            <?php
+                <?php
         if(isset($_GET['cancelPromise']) =="ok"){
         $id4view = $_GET['id4view'];
                     $updateStatusRent = new queryData();
@@ -153,28 +185,28 @@
 
                     if($sql4update){
                         ?>
-            <script>
-Swal.fire({
-    icon: 'success',
-    title: 'ยกเลิกสัญญาเช่าเรียบร้อยแล้ว',
-    showConfirmButton: false,
-    timer: 2000
-}).then(function() {
-    window.location.href = 'officer.php?p=show_rent_mange';
-});
-            </script>
-            <?php
+                <script>
+                Swal.fire({
+                    icon: 'success',
+                    title: 'ยกเลิกสัญญาเช่าเรียบร้อยแล้ว',
+                    showConfirmButton: false,
+                    timer: 2000
+                }).then(function() {
+                    window.location.href = 'officer.php?p=show_rent_mange';
+                });
+                </script>
+                <?php
                     }
                 }
                 
                 ?>
 
 
-            </script>
+                </script>
 
 
 
-            <?php
+                <?php
         if(isset($_GET['doPromiseAgain']) =="ok"){
         $id4view = $_GET['id4view'];
                     $updateStatusRent2 = new queryData();
@@ -186,17 +218,17 @@ Swal.fire({
 
                     if($sql4update3){
                         ?>
-            <script>
-Swal.fire({
-    icon: 'success',
-    title: 'ต่อสัญญาเช่าเรียบร้อยแล้ว',
-    showConfirmButton: false,
-    timer: 2000
-}).then(function() {
-    window.location.href = 'officer.php?p=show_rent_mange';
-});
-            </script>
-            <?php
+                <script>
+                Swal.fire({
+                    icon: 'success',
+                    title: 'ต่อสัญญาเช่าเรียบร้อยแล้ว',
+                    showConfirmButton: false,
+                    timer: 2000
+                }).then(function() {
+                    window.location.href = 'officer.php?p=show_rent_mange';
+                });
+                </script>
+                <?php
                     }
                 }
                 

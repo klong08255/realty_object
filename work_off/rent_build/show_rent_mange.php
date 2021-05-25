@@ -19,6 +19,9 @@
             <table class="table table-striped w-100" id="myTable">
                 <thead class="text-center alert alert-success text-nowrap">
                     <tr id="bg_hd_table_m">
+                    <th>
+                        #
+                    </th>
                         <th>
                             ชื่อ-นามสกุล
                         </th>
@@ -55,9 +58,7 @@
                         <th>
                             สถานะจ่ายเงิน
                         </th>
-                        <th>
-                            หลักฐานการจ่ายเงิน
-                        </th>
+                        
                         <th>
                             จัดการข้อมูล
                         </th>
@@ -68,12 +69,17 @@
 
                     <?php
                             
-                            $res = $insertUser->runQuery("SELECT data_build.*, people_rent.* FROM people_rent LEFT JOIN data_build ON people_rent.id_data_build = data_build.id");
+                            $res = $insertUser->runQuery("SELECT data_build.*, people_rent.* FROM people_rent LEFT JOIN data_build ON people_rent.id_data_build = data_build.id ");
+                            $i = 1;
                             while($num = mysqli_fetch_array($res))
                             {
                                 $data_buildID = $num['id_data_build'];
                             ?>
                     <tr>
+                        <td>
+                        <?=$i;?>
+                        <?php $i++;?>
+                        </td>
                         <td>
                             <?php echo$num['name']; ?>
                         </td>
@@ -91,9 +97,10 @@
                             <?php         
                                         if($num['status'] =="full"){
                                                     $nowDate = date('Y-m-d');
-                                                    if($nowDate > $num['datestop_rent']){
-                                                        $sqlupdatePeopleR1 = $updatePeopleR->runQuery("UPDATE data_build SET status='empty' ");
-                                                        $sqlupdatePeopleR2 = $updatePeopleR->runQuery("UPDATE people_rent SET status_rent='ยกเลิกสัญญาเช่า' ");
+                                                   
+                                                    if($num['status_rent'] == "เช่าอยู่" && $nowDate > $num['datestop_rent']){
+                                                        $sqlupdatePeopleR1 = $updatePeopleR->runQuery("UPDATE data_build SET status='empty' where id=$num[id_data_build] ");
+                                                        $sqlupdatePeopleR2 = $updatePeopleR->runQuery("UPDATE people_rent SET status_rent='ยกเลิกสัญญาเช่า' where id_rent=$num[id_rent] ");
                                                         
                                                         
                                                         if($sqlupdatePeopleR1 && $sqlupdatePeopleR2){
@@ -112,7 +119,7 @@
                             </script>
                             <?php
                                                         }
-                                                    }
+                                                    } //ต้องมี else if
                                                 }
                                     ?>
                         </td>
@@ -140,9 +147,7 @@
                         <td>
                             <?php echo$num['status_pay']; ?>
                         </td>
-                        <td>
-                            <?php echo$num['evidence_pay']; ?>
-                        </td>
+                        
                         <td>
 
                             <a href="officer.php?p=view_rent&id4view=<?php echo $num['id_rent']; ?>"
