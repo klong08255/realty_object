@@ -13,7 +13,8 @@
                     <h4 class="text-center">2. สำเนาทะเบียนบ้าน <i class="fas fa-address-card"></i></h4>
                 </div>
             </div>
-
+                    <img src="image/upload/idcard.png"  alt="">
+                    <img src="image/upload/register.png"  alt="">
             </div>
 
         </div>
