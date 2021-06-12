@@ -1,5 +1,5 @@
 <div class="container mt-4 mb-4">
-    <div class="card">
+    <div class="card vh-100">
         <div class="card-header text-center">
             <h3><b><i class="fas fa-file-alt text-primary"></i> เอกสารที่ต้องใช้ในการเช่า</b></h3>
         </div>
