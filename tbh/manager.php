@@ -27,6 +27,10 @@
     </head>
 
     <body class="sb-nav-fixed" style="font-family: 'Mitr', sans-serif;">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.3.2/chart.min.js"></script> <!-- chart-js -->
+
+
         <!--------------------------------------- navbar-------------------------------------------------->
             <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
                 <a class="navbar-brand"><i class="fa fa-user-tie"></i> ผู้บริหาร</a>
@@ -98,6 +102,7 @@
         <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js" crossorigin="anonymous">
         </script>
         <script src="assets/demo/datatables-demo.js"></script>
+        
     </body>
 </html>
 

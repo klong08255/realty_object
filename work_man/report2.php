@@ -6,6 +6,135 @@
                 $updatePeopleR = new queryData();
             ?>
 
+<div class="card mb-4 ">
+    <div class="card-header bg-primary text-light">
+        <h3 class="font-weight-bold text-center"><b><i class="fas fa-table"></i>
+                ตั้งชื่อเอาเอง</b></h3>
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md">
+                <canvas  class="w-100" id="myChart1"></canvas>
+            </div>
+            <div class="col-md">
+                <canvas  class="w-100" id="chart_2"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+$(document).ready(() => {
+    $.ajax({
+        method: 'post',
+        url: '../work_man/api_re2.php',
+        dataType: 'json',
+        data: {
+            data1: "ok"
+        },
+        success: (data1) => {
+            console.log(data1)
+            var name_category1 = []
+            var value_cate1 = []
+
+            for (var key1 in data1) {
+                name_category1.push(data1[key1].category1)
+                value_cate1.push(data1[key1].sum1)
+            }
+
+            console.log(name_category1)
+            console.log(value_cate1)
+
+            var ctx = document.getElementById('myChart1').getContext('2d');
+            var myChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: name_category1,
+                    datasets: [{
+                        label: 'ยอดเงิน/บาท',
+                        data: value_cate1,
+                        backgroundColor: [
+                            'rgb(0, 153, 51, 0.2)',
+                            'rgb(204, 0, 0, 0.2)'
+                        ],
+                        borderColor: [
+                            'rgb(0, 153, 51)',
+                            'rgb(204, 0, 0)'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+
+        }
+    })
+
+    // !2
+
+    $.ajax({
+        method: 'post',
+        url: '../work_man/api_re2_2.php',
+        dataType: 'json',
+        data: {
+            data2: "ok"
+        },
+        success: (data2) => {
+            console.log(data2)
+            var name_category2 = []
+            var value_cate2 = []
+
+            for (var key2 in data2) {
+                name_category2.push(data2[key2].category2)
+                value_cate2.push(data2[key2].sum2)
+            }
+
+            console.log(name_category2)
+            console.log(value_cate2)
+
+            var ctx2 = document.getElementById('chart_2').getContext('2d');
+            var chart_2 = new Chart(ctx2, {
+                type: 'pie',
+                data: {
+                    labels: name_category2,
+                    datasets: [{
+                        label: 'ยอดผู้ชำระและยังไม่ชำระเงิน/คน',
+                        data: value_cate2,
+                        backgroundColor: [
+                            'rgb(51, 102, 255, 0.2)',
+                            'rgb(204, 0, 0, 0.2)'
+                        ],
+                        borderColor: [
+                            'rgb(51, 102, 255)',
+                            'rgb(204, 0, 0)'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        }
+    })
+
+    
+})
+</script>
+
+
+<!-- //! End Chart -->
+
 <div class="card">
     <div class="card-header" id="bg_hd_card_m2">
         <h3 class="font-weight-bold text-center"><b><i class="fas fa-table"></i>
@@ -80,7 +209,7 @@
                             <?php echo$num['datestart_rent']; ?>
                         </td>
                         <td>
-                            
+
                             <?php echo$num['datestop_rent']; ?>
                             <?php         
                                         if($num['status'] =="full"){
@@ -138,7 +267,7 @@
 
                             <a href="manager.php?p=view_rent&id4view=<?php echo $num['id_rent']; ?>"
                                 class="btn btn-primary w-100">ดูข้อมูล</a>
-                            
+
                         </td>
 
                     </tr>
