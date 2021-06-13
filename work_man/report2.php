@@ -212,31 +212,7 @@ $(document).ready(() => {
 
                             <?php echo$num['datestop_rent']; ?>
                             <?php         
-                                        if($num['status'] =="full"){
-                                                    $nowDate = date('Y-m-d');
-                                                    if($nowDate > $num['datestop_rent']){
-                                                        $sqlupdatePeopleR1 = $updatePeopleR->runQuery("UPDATE data_build SET status='empty' ");
-                                                        $sqlupdatePeopleR2 = $updatePeopleR->runQuery("UPDATE people_rent SET status_rent='ยกเลิกสัญญาเช่า' ");
-                                                        
-                                                        
-                                                        if($sqlupdatePeopleR1 && $sqlupdatePeopleR2){
-                                                            ?>
-                            <script>
-                            $(document).ready(function() {
-                                Swal.fire({
-                                    icon: 'success',
-                                    title: 'คุณ : <?php echo $num['name']; ?> ครบกำหนดสัญญาเช่าแล้ว',
-                                    showConfirmButton: false,
-                                    timer: 2000
-                                }).then(function() {
-                                    location.reload();
-                                })
-                            });
-                            </script>
-                            <?php
-                                                        }
-                                                    }
-                                                }
+                                      
                                     ?>
                         </td>
                         <td>
