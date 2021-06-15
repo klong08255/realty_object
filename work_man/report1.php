@@ -9,7 +9,7 @@
 <div class="card mb-4 ">
     <div class="card-header bg-primary text-light">
         <h3 class="font-weight-bold text-center"><b><i class="fas fa-table"></i>
-                ตั้งชื่อเอาเอง</b></h3>
+                แผนภูมิแสดงสถานะอาคาร</b></h3>
     </div>
     <div class="card-body">
         <div class="row d-flex justify-content-center">

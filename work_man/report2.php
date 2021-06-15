@@ -9,7 +9,7 @@
 <div class="card mb-4 ">
     <div class="card-header bg-primary text-light">
         <h3 class="font-weight-bold text-center"><b><i class="fas fa-table"></i>
-                ตั้งชื่อเอาเอง</b></h3>
+                แผนภูมิแสดงยอดเงินที่ชำระ</b></h3>
     </div>
     <div class="card-body">
         <div class="row">
@@ -138,7 +138,7 @@ $(document).ready(() => {
 <div class="card">
     <div class="card-header" id="bg_hd_card_m2">
         <h3 class="font-weight-bold text-center"><b><i class="fas fa-table"></i>
-                ตารางจัดการการเช่าอาคารอสังหาริมทรัพย์</b></h3>
+                ตารางข้อมูลการเช่าอาคารอสังหาริมทรัพย์</b></h3>
     </div>
     <div class="card-body">
         <div class="table-responsive">
