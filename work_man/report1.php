@@ -51,12 +51,12 @@ $(document).ready(() => {
                         label: 'ยอดเงิน/บาท',
                         data: value_cate1,
                         backgroundColor: [
-                            'rgb(0, 153, 51, 0.2)',
-                            'rgb(204, 0, 0, 0.2)'
+                            'rgb(204, 0, 0, 0.2)',
+                            'rgb(0, 153, 51, 0.2)'
                         ],
                         borderColor: [
-                            'rgb(0, 153, 51)',
-                            'rgb(204, 0, 0)'
+                            'rgb(204, 0, 0)' ,
+                            'rgb(0, 153, 51)'
                         ],
                         borderWidth: 1
                     }]

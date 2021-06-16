@@ -15,7 +15,7 @@
             );
             array_push($rs_arr, $result1);
             // echo json_encode($result1, JSON_UNESCAPED_UNICODE);
-          
+        
         }else{
             echo"something went wrong in the database";
         }
