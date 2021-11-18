@@ -96,6 +96,9 @@
                     <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
                         <a href="index.php?p=home" class="ml-2 text-dark btn"><i class="fas fa-home"></i> หน้าแรก</a>
+                    <li class="nav-item">
+                        <a href="index.php?p=login_manage" class="ml-2 text-dark btn"><i class="fas fa-user-cog"></i> การจัดการอสังหาริมทรัพย์</a>  
+                    </li>   
                     </li>
                     <li class="nav-item">
                         <a href="index.php?p=rent_data" class="ml-2 text-dark btn"><i class="fas fa-file-alt"></i> เอกสารที่ต้องใช้</a>
@@ -131,6 +134,9 @@
                 break;
                 case "all_news":
                     include_once('allnews.php');
+                break;
+                case "login_manage":
+                    include_once('loginformanage.php');
                 break;
 
                 default:
