@@ -60,10 +60,16 @@
             <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
                 <div class="sb-sidenav-menu">
                     <div class="nav">
+
                         <a class="nav-link collapsed" href="officer.php?p=p1" data-target="#collapseLayouts"
                             aria-expanded="false" aria-controls="collapseLayouts">
                             <div class="sb-nav-link-icon "><i class="fas fa-newspaper"></i></div>
                             จัดการข่าว
+                        </a>
+                        <a class="nav-link collapsed" href="officer.php?p=p4_show_tenant" data-target="#collapseLayouts"
+                            aria-expanded="false" aria-controls="collapseLayouts">
+                            <div class="sb-nav-link-icon "><i class="fas fa-newspaper"></i></div>
+                            จัดการข้อมูลผู้เช่า
                         </a>
                         <a class="nav-link collapsed" href="officer.php?p=data_build" data-target="#collapseLayouts"
                             aria-expanded="false" aria-controls="collapseLayouts">
@@ -100,7 +106,16 @@
                     case 'p3_edit_news' :{
                         include_once('../work_off/news/editnews.php');
                     break;
-                    }  
+                    } 
+            //*ผู้ใช้
+                    case 'p4_show_tenant' :{
+                        include_once('../work_off/tenant/show_tenant.php');
+                    break;
+                    } 
+                    case 'p5_add_tenant' :{
+                        include_once('../work_off/tenant/add_tenant.php');
+                    break;
+                    } 
             //*เช่า
                     case 'data_build' :{
                         include_once('../work_off/data_build/show_data.php');
