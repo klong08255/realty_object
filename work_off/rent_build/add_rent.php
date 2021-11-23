@@ -13,10 +13,10 @@
                     <div class="form-row">
                         
                         <div class="form-group col-md-4">
-                            <label for="inputState">เลือกอาคารที่ต้องการเช่า</label>
+                            <label for="inputState">เลือกข้อมูลอาคาร</label>
                                 <select id="" class="form-control" name="type" required placeholder="เลือก">
                                 
-                                                <option selected value="">----:: โปรดเลือกอาคารที่ต้องการเช่า ::----</option>
+                                                <option selected value="">----:: โปรดเลือกข้อมูลอาคาร ::----</option>
 
                                                 <?php
                                     $selectTable_D_B = new queryData();
@@ -32,71 +32,101 @@
                                         echo"Can't SQL1";
                                     }
                                 ?>
-                                    
-
-                                    
                                 </select>
                         </div>
-                        <div class="form-group col-md-2">
-                        <label>ชื่อ-นามสกุล</label>
+                        <div class="form-group col-md-4">
+                            <label>ชื่อ-นามสกุล</label>
                         <input type="text" class="form-control" id="inputName" name="name" required placeholder="กรอกชื่อ-นามสกุล">
                         </div>
-                        <div class="form-group col-md-2">
-                        <label>เลขประจำตัวประชาชน</label>
-                        <input type="text" class="form-control" id="inputId_card" name="card_id4people" required placeholder="กรอกเลขประจำตัวประชาชน" maxlength="13">
-                        </div>
-                        <div class="form-group col-md-4">
-                        <label>บ้านเลขที่ตามบัตรประชาชน</label>
-                        <textarea  class="form-control" id="inputAddress" name="address" required></textarea>
-                        </div>
-                        <div class="form-group col-md-2">
-                        <label>วันเดือนปีเกิด</label>
-                        <input type="date" class="form-control" id="inputBrithday" name="brithday" required placeholder="">
-                        </div>
-                        <div class="form-group col-md-2">
-                        <label>อายุ</label>
-                        <input type="number" class="form-control" id="inputAge" name="age" required placeholder="กรอกอายุ">
-                        </div>
-                        <div class="form-group col-md-2">
-                        <label>เชื้อชาติ</label>
-                        <input type="text" class="form-control" id="inputNationality" name="nationality" required placeholder="กรอกเชื้อชาติ">
-                        </div>
-                        <div class="form-group col-md-2">
-                        <label>สัญชาติ</label>
-                        <input type="text" class="form-control" id="inputNationality2" name="nationality2" required placeholder="กรอกสัญชาติ">
-                        </div>
-                        <div class="form-group col-md-2">
-                        <label>โทรศัพท์</label>
-                        <input type="text" class="form-control" id="inputPhone_number" name="phone_number" required placeholder="กรอกเบอร์โทรศัพท์" maxlength="10">
-                        </div>
-                        <div class="form-group col-md-2">
-                        <label>สถานะชำระเงิน</label>
-                            <select id="inputState" class="form-control" name="status_pay" required placeholder="เลือก">
-                                <option value="ชำระแล้ว">ชำระแล้ว</option>
-                                <option value="ยังไม่ชำระ">ยังไม่ชำระ</option>
+                        <div class="form-group col-md-1">
+                            <label>ประเภท</label>
+                            <select id="inputState" class="form-control" name="prefix" required >
+                                <option value="อาศัย">อาศัย</option>
+                                <option value="ค้าขาย">ค้าขาย</option>
+                                <option value="บริษัท">บริษัท</option>
                             </select>
                         </div>
-                        <div class="form-group col-md-2">
-                        <label>วันที่เริ่มเช่า</label>
-                        <input type="date" class="form-control" id="input" name="datestart_rent" required>
+                        <div class="form-group col-md-3">
+                            <label>ชื่อร้านค้า/บ้าน</label>
+                        <input type="text" class="form-control" id="inputNamebuild" name="namebuild" required placeholder="ชื่ออาคาร">
                         </div>
-                        <div class="form-group col-md-2">
-                        <label>วันที่ครบกำหนด</label>
-                        <input type="date" class="form-control" id="input" name="datestop_rent" required>
+                    </div>
+
+                        <div class="form-row">
+                            <div class="form-group col-md-2">
+                                <label>วันที่เริ่มเช่า</label>
+                            <input type="date" class="form-control" id="input" name="datestart_rent" required>
+                            </div>
+                            <div class="form-group col-md-2">
+                                <label>วันที่สิ้นสุดการเช่า</label>
+                            <input type="date" class="form-control" id="input" name="datestop_rent" required>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label>เลขที่กรมธรรม์ประกันภัยอาคาร</label>
+                                <input type="text" class="form-control" id="inputInsurance_number" name="insurance_number" required placeholder="กรอกเลขที่กรมธรรม์ประกันภัยอาคาร">
+                            </div>
+                            <div class="form-group col-md-2">
+                                <label>วันที่เริ่มประกัน</label>
+                                <input type="date" class="form-control" id="inputDate_insurance" name="date_insurance" required placeholder="" value="">
+                            </div>
+                            <div class="form-group col-md-2">
+                                <label>วันที่สิ้นสุดประกัน</label>
+                                <input type="date" class="form-control" id="inputDate_insurance_stop" name="date_insurance_stop" required placeholder="" value="">
+                            </div>
                         </div>
-                        <div id="show_img" class="form-group col-md-2 " >
-                        <label>ภาพหลักฐานการจ่ายเงิน</label>
-                        <input type="file" class="" id="img" name="slip_receipt" required>
-                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group col-md-2">
+                                <label>เรตค่าเช่า</label>
+                                <input type="number" class="form-control" id="inputRate" name="rate" required placeholder="กรอกเรตค่าเช่า" maxlength="10">
+                            </div>
+                            <div class="form-group col-md-2">
+                                <label>ค่าเช่า/เดือน</label>
+                                <input type="number" class="form-control" id="inputRent_month" name="rent_month" required placeholder="ค่าเช่า/เดือน">
+                            </div>                   
+                            <div class="form-group col-md-2">
+                                <label>ค่าเช่า/ปี</label>
+                                <input type="number" class="form-control" id="inputRent_year" name="rent_year" required placeholder="ค่าเช่า/เดือน">
+                            </div>
+                            <div class="form-group col-md-2">
+                                <label>ค่าธรรมเนียมการทำสัญญา</label>
+                                <input type="number" class="form-control" id="inputContract_fee" name="contract_fee" required placeholder="ค่าธรรมเนียมการทำสัญญา">
+                            </div>
+                            <div class="form-group col-md-2">
+                                <label>ค่าบำรุงการจดทะเบียน</label>
+                                <input type="number" class="form-control" id="inputRegis_fee" name="regis_fee" required placeholder="ค่าบำรุงการจดทะเบียน" value="">
+                            </div>
+                            <div class="form-group col-md-2">
+                                <label>ค่าประกันอัคคีภัย</label>
+                                <input type="number" class="form-control" id="inputFire_insurance" name="fire_insurance" required placeholder="ค่าประกันอัคคีภัย" value="">
+                            </div>
+                        </div>    
                         
+                        <div class="form-row">
+                            <div class="form-group col-md-2">
+                                <label>รวมทั้งสิ้น</label>
+                                <input type="number" class="form-control" id="inputSum" name="sum" required placeholder="รวมทั้งสิ้น" value="">
+                            </div>
+                            <div id="show_img" class="form-group col-md-2 " >
+                                <label>หลักฐานการชำระเงิน</label>
+                                <input type="file" class="" id="img" name="slip_receipt" required>
+                            </div>
+                        </div>
+                            
+                    
+
+
+
+
+            </div>
                     
                     </div>
 
                 <div class="text-right">
-                    <button type="reset" class="btn btn-warning">Reset</button>
+                    <button type="reset" class="btn btn-warning">ยกเลิก</button>
                     <button type="submit" class="btn btn-success" name="submit">เพิ่มข้อมูลการเช่า</button>
                 </div>
-                <!-- แก้กงงี้ -->
+                <!-- แก้ตรงงงี้ -->
                 </form>
                     
                     

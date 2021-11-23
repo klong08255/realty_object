@@ -13,7 +13,7 @@
                 <div class="form-row">
                     <div class="form-group col-md-6">
                     <label>ที่อยู่ของอาคาร</label>
-                    <textarea  class="form-control" id="inputBuild_address" name="build_address" required></textarea> 
+                    <input  type="text" class="form-control" id="inputBuild_address" name="build_address" required placeholder="กรอกที่อยู่"></input> 
                     </div>
                     <div class="form-group col-md-2">
                     <label>ความกว้าง (ม.)</label>
@@ -34,64 +34,15 @@
                     <input type="number" class="form-control" id="inputNumb_row" name="numb_row" required placeholder="กรอกจำนวนคูหา">
                     </div>
                     <div class="form-group col-md-2">
-                    <label for="inputState">ประเภท</label>
-                    <select id="inputState" class="form-control" name="type" required placeholder="เลือก">
-                        <option value="อาศัย">อาศัย</option>
-                        <option value="ร้านค้า">ร้านค้า</option>
-                    </select>
+                    <label>พื้นที่ใช้สอย</label>
+                    <input type="number" class="form-control" id="inputUse_area" name="usea_rea" required placeholder="กรอกพื้นที่ใช้สอย">
                     </div>
-                    <div class="form-group col-md-2">
-                    <label>เลขประกันภัย</label>
-                    <input type="text" class="form-control" id="inputNumber_insurance" name="number_insurance" required placeholder="กรอกเลขประกันภัย">
-                    </div>
-                    <div class="form-group col-md-2">
-                    <label>ค่าประกันอัคคีภัย</label>
-                    <input type="text" class="form-control" id="inputInsurance_fire" name="insurance_fire" required placeholder="กรอกค่าประกันอัคคีภัย">
-                    </div>
-                    <div class="form-group col-md-2">
-                    <label>เงินประกันการเช่า</label>
-                    <input type="number" class="form-control" id="inputRent_deposit" name="rent_deposit" required placeholder="กรอกเงินประกันการเช่า">
-                    </div>
-                    <div class="form-group col-md-2">
-                    <label>ค่าบำรุงการจดทะเบียน</label>
-                    <input type="number" class="form-control" id="inputRegis_fee" name="regis_fee" required placeholder="กรอกค่าบำรุงการจดทะเบียน">
-                    </div>
-                    
-                    
-                </div>
-                <div class="form-row">
-                    
-                    <div class="form-group col-md-2">
-                    <label>เรตค่าเช่า</label>
-                    <input type="text" class="form-control" id="inputRate" name="rate" required placeholder="กรอกเรตค่าเช่า">
-                    </div>
-                    <div class="form-group col-md-2">
-                    <label>ภาษีที่ดิน/ปี</label>
-                    <input type="number" class="form-control" id="inputLand_tax" name="land_tax" required placeholder="กรอกภาษีที่ดิน/ปี">
-                    </div>
-                    <div class="form-group col-md-2">
-                    <label>ค่าธรรมเนียมสัญญา</label>
-                    <input type="number" class="form-control" id="inputContract_fee" name="contract_fee" required placeholder="กรอกค่าธรรมเนียมสัญญา">
-                    </div>
-                    <div class="form-group col-md-2">
-                    <label>ค่าทำสัญญา</label>
-                    <input type="number" class="form-control" id="inputContract_fee2" name="contract_fee2" required placeholder="กรอกค่าทำสัญญา">
-                    </div>
-                    <div class="form-group col-md-2">
-                    <label>วันที่เริ่มประกัน</label>
-                    <input type="date" class="form-control" id="inputDate_insurance" name="date_insurance" required placeholder="กรอกวันที่เริ่มประกัน">
-                    </div>
-                    <div class="form-group col-md-2">
-                    <label>วันที่หมดประกัน</label>
-                    <input type="date" class="form-control" id="inputDate_insurance_stop" name="date_insurance_stop" required placeholder="กรอกวันที่หมดประกัน">
-                    </div>
+
                 </div>
 
                 <div class="text-right">
-                <button type="reset" class="btn btn-warning">Reset</button>
+                <button type="reset" class="btn btn-warning">ยกเลิก</button>
                 <button type="submit" class="btn btn-success" name="submit">เพิ่มข้อมูลอาคาร</button>
-                </div>
-
                 </div>
                 
 
