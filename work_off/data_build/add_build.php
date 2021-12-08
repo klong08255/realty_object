@@ -44,7 +44,7 @@
                 <button type="reset" class="btn btn-warning">ยกเลิก</button>
                 <button type="submit" class="btn btn-success" name="submit">เพิ่มข้อมูลอาคาร</button>
                 </div>
-                
+                ทำเพิ่มข้อมูลอาคาร
 
                 </form>
 
@@ -154,7 +154,7 @@
                 <button type="reset" class="btn btn-warning">Reset</button>
                 <button type="submit" class="btn btn-success" name="submit">แก้ไขข้อมูลอาคาร</button>
                 </div>
-
+                
                 </div>
                 
 
