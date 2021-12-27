@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 23, 2021 at 04:28 PM
+-- Generation Time: Dec 27, 2021 at 01:30 PM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.11
 
@@ -30,36 +30,12 @@ SET time_zone = "+00:00";
 CREATE TABLE `data_build` (
   `id` int(5) NOT NULL COMMENT 'ลำดับที่',
   `build_address` varchar(100) NOT NULL COMMENT 'ที่อยู่ของอาคาร',
-  `rent_month` int(5) NOT NULL COMMENT 'ค่าเช่า/เดือน',
-  `rent_year` int(50) NOT NULL COMMENT 'ค่าเช่า/ปี',
-  `rent_deposit` int(50) NOT NULL COMMENT 'เงินประกันการเช่า',
-  `regis_fee` int(50) NOT NULL COMMENT 'ค่าบำรุงการจดทะเบียน',
   `width` int(50) NOT NULL COMMENT 'ความกว้าง',
   `lenght` int(50) NOT NULL COMMENT 'ความยาว',
   `numb_layer` int(50) NOT NULL COMMENT 'จำนวนชั้น',
   `numb_row` int(50) NOT NULL COMMENT 'จำนวนคูหา',
-  `type` varchar(20) NOT NULL COMMENT 'ประเภท(อาศัย/ร้านค้า)',
-  `use_area` varchar(5) NOT NULL COMMENT 'พื้นที่ใช้สอย',
-  `rate` varchar(50) NOT NULL COMMENT 'เรตค่าเช่า',
-  `land_tax` int(50) NOT NULL COMMENT 'ภาษีที่ดิน/ปี',
-  `contract_fee` int(50) NOT NULL COMMENT 'ค่าธรรมเนียมสัญญา',
-  `contract_fee2` int(50) NOT NULL COMMENT 'ค่าทำสัญญา',
-  `number_insurance` varchar(30) NOT NULL COMMENT 'เลขประกันภัย',
-  `date_insurance` date NOT NULL COMMENT 'วันที่เริ่มประกัน',
-  `date_insurance_stop` date NOT NULL COMMENT 'วันหมดประกัน',
-  `insurance_fire` int(50) NOT NULL COMMENT 'ประกันอัคคีภัย',
-  `status` varchar(50) NOT NULL COMMENT 'สถานะ',
-  `total_pay` varchar(10) NOT NULL COMMENT 'ยอดชำระ'
+  `use_area` varchar(5) NOT NULL COMMENT 'พื้นที่ใช้สอย'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `data_build`
---
-
-INSERT INTO `data_build` (`id`, `build_address`, `rent_month`, `rent_year`, `rent_deposit`, `regis_fee`, `width`, `lenght`, `numb_layer`, `numb_row`, `type`, `use_area`, `rate`, `land_tax`, `contract_fee`, `contract_fee2`, `number_insurance`, `date_insurance`, `date_insurance_stop`, `insurance_fire`, `status`, `total_pay`) VALUES
-(6, '70/1 ม.1 ต.นครสวรรค์ตก อ.เมือง จ.นครสวรรค์ 60000', 648, 7776, 100, 100, 4, 12, 3, 1, 'อาศัย', '144', '4.5', 1064, 100, 100, '706-20-11-FR1-00043', '2021-04-20', '2021-04-21', 1064, 'full', '10304'),
-(7, '80/1 ม.2 ต.นคสวรรค์ออก อ.เมือง จ.นครสวรรค์ 60000', 1073, 12864, 100, 100, 5, 13, 3, 1, 'อาศัย', '195', '5.5', 1000, 100, 100, '706-20-11-FR1-00032', '2021-04-20', '2021-04-22', 1064, 'full', '15328'),
-(8, '70/23 ม.1 ต.นครสวรรค์ตก อ.เมือง จ.นครสวรรค์ 60000', 648, 7776, 100, 100, 12, 4, 3, 1, 'อาศัย', '144', '4.5', 26, 100, 100, '706-20-11-FR1-00043', '2021-04-22', '2022-04-22', 1064, 'empty', '9266');
 
 -- --------------------------------------------------------
 
@@ -82,9 +58,11 @@ CREATE TABLE `news` (
 --
 
 INSERT INTO `news` (`id`, `news_title`, `news_summary`, `news_description`, `news_author`, `news_cover`, `date_create`) VALUES
-(2, 'ด่วน! อาคารว่างมีจำนวนจำกัด', 'ด่วนมากกกกก', '-', 'เจ้าหน้าที่ ', '161009698567396.png', '2021-01-08 09:09:45'),
-(45, 'ข่าวด่วนที่สุด ! ', 'ด่วนจี๋', 'asdf', 'เจ้าหน้าที่ ', '161009693519696.png', '2021-01-08 09:08:55'),
-(46, 'คมชัดลึก', 'ลึกกว่าข่าว', 'นะจ้ะ', 'เจ้าหน้าที่ ', '161009692392195.png', '2021-01-08 09:08:43');
+(2, 'การถวายภัตตาหารเพลงานสอบสนามหลวง', '-', 'พระบาทสมเด็จพระปรเมนทรรามาธิบดีศรีสินทรมหาวชิราลงกรณ พระวชิรเกล้าเจ้าอยู่หัว สมเด็จพระนางเจ้าสุทิดา พัชรสุธาพิมลลักษ พระบรมราชินี เจ้าคุณพระสินีนาฏ พิลาสกัลยาณี ทรงมีพระราชศรัทธา ทรงพระกรุณาโปรดเกล้าฯ ให้นายสิริรัฐ ชุมอุปการ ผู้ว่าราชการจังหวัดนครสวรรค์ เชิญภัตตาหาร, สมุดบันทึก, เจลล้างมือ, หน้ากากอนามัย และกระบอกน้ำดื่มมาถวายแก่พระภิกษุสามเณร และนักเรียนผู้เข้าสอบบาลีสนามหลวง ทั้งส่วนกลางและส่วนภูมิภาค ทั่วประเทศ', 'นายนพเก้า ถึงถาวร', '162351177164139.jpg', '2021-06-12 15:29:31'),
+(45, 'ข้อคิดคติธรรม', '-', 'บัณฑิตทั้งหลายสอนไว้ว่า... คุณไม่ต้องรอให้เก่งถึงจะเริ่มต้น แต่คุณต้องเริ่มต้นถึงจะเป็นคนเก่ง', 'นายนพเก้า ถึงถาวร', '16235118417359.jpg', '2021-06-12 15:30:40'),
+(46, 'คติธรรม', '-', 'ในบรรดาอำนาจทั้งปวงโลก อำนาจกรรมยิ่งใหญ่ที่สุด อำนาจกรรมดีคือบุญ อำนาจกรรมชั่วคือบาป เป็นสมบัติที่แท้จริงของมนุษย์ ทั้งตอนเป็นและตอนตาย', 'นายนพเก้า ถึงถาวร', '162351192797888.jpg', '2021-06-12 15:32:07'),
+(47, 'ข้อคิดคติธรรม', '-', 'หลวงปู่ชา สุภทฺโท สอนไว้ว่า... อะไรจะมาทำให้เราเสียหายไปไม่ได้ นอกจากจิตใจของเราที่คิดผิดเอง ดังนั้น จงระวังอย่าให้จิตใจของเราคิดผิด', 'นายนพเก้า ถึงถาวร', '162351200026873.jpg', '2021-06-12 15:33:19'),
+(48, 'ข้อคิดคติธรรม', '-', 'พุทธทาส ภิกขุ สอนไว้ว่า... \"จิดใจ\" ที่ไร้ทุกข์ คือจิตใจที่เรียนรู้ว่า \"ชีวิต\" ไม่จำเป็นต้องมีความสุขทุกเวลา', 'นายนพเก้า ถึงถาวร', '162351207869958.jpg', '2021-06-12 15:34:38');
 
 -- --------------------------------------------------------
 
@@ -96,27 +74,40 @@ CREATE TABLE `people_rent` (
   `id_rent` int(5) NOT NULL COMMENT 'idตาราง',
   `id_data_build` int(5) NOT NULL COMMENT 'id data build',
   `name` varchar(30) NOT NULL COMMENT 'ชื่อ',
-  `age` int(2) NOT NULL COMMENT 'อายุ',
-  `nationality` varchar(20) NOT NULL COMMENT 'เชื้อชาติ',
-  `nationality2` varchar(20) NOT NULL COMMENT 'สัญชาติ',
-  `address` varchar(100) NOT NULL COMMENT 'บ้านเลขที่ตามบัตรประชาชน',
-  `phone_number` varchar(10) NOT NULL COMMENT 'โทรศัพท์',
-  `id_card` varchar(13) NOT NULL COMMENT 'เลขบัตรปชช.',
-  `brithday` date NOT NULL COMMENT 'วันเกิด',
-  `status_pay` varchar(20) NOT NULL COMMENT 'สถานะจ่ายเงิน',
-  `datestart_rent` date NOT NULL,
-  `datestop_rent` date NOT NULL,
-  `status_rent` varchar(20) NOT NULL DEFAULT 'เช่าอยู่',
-  `evidence_pay` varchar(50) NOT NULL
+  `datestart_rent` date NOT NULL COMMENT 'วันที่เริ่มเช่า',
+  `datestop_rent` date NOT NULL COMMENT 'วันที่สิ้นสุดการเช่า',
+  `insurance_number` varchar(20) NOT NULL COMMENT 'เลขที่กรมธรรม์ประกันภัยอาคาร',
+  `date_insurance` date NOT NULL COMMENT 'วันที่เริ่มประกัน',
+  `date_insurance_stop` date NOT NULL COMMENT 'วันที่สิ้นสุดประกัน',
+  `rate` int(2) NOT NULL COMMENT 'เรตค่าเช่า',
+  `rent_month` int(10) NOT NULL COMMENT 'ค่าเช่า/เดือน',
+  `rent_year` int(11) NOT NULL COMMENT 'ค่าเช่า/ปี',
+  `contract_fee` int(11) NOT NULL COMMENT 'ค่าธรรมเนียมการทำสัญญา',
+  `regis_fee` int(11) NOT NULL COMMENT 'ค่าบำรุงการจดทะเบียน',
+  `fire_insurance` int(11) NOT NULL COMMENT 'ค่าประกันอัคคีภัย',
+  `sum` int(11) NOT NULL COMMENT 'รวมทั้งสิ้น',
+  `slip_receipt` varchar(10) NOT NULL COMMENT 'หลักฐานการชำระเงิน'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+-- --------------------------------------------------------
+
 --
--- Dumping data for table `people_rent`
+-- Table structure for table `tenant`
 --
 
-INSERT INTO `people_rent` (`id_rent`, `id_data_build`, `name`, `age`, `nationality`, `nationality2`, `address`, `phone_number`, `id_card`, `brithday`, `status_pay`, `datestart_rent`, `datestop_rent`, `status_rent`, `evidence_pay`) VALUES
-(15, 6, 'นายนพเก้า ถึงถาวร', 22, 'ไทย', 'ไทย', '70/1 ม.1 ต.นครสวรรค์ตก อ.เมือง จ.นครสวรรค์ 60000', '0644060454', '1619900324695', '1998-11-09', 'ยังไม่ชำระ', '2021-04-20', '2022-04-20', 'เช่าอยู่', ''),
-(16, 7, 'นายนพเก้า ถึงถาวร', 22, 'ไทย', 'ไทย', '70/1 ม.1 ต.นครสวรรค์ตก อ.เมือง จ.นครสวรรค์ 60000', '0644060454', '1619900324695', '1998-11-09', 'ยังไม่ชำระ', '2021-04-22', '2021-04-23', 'เช่าอยู่', '');
+CREATE TABLE `tenant` (
+  `id` int(5) NOT NULL COMMENT 'idตาราง',
+  `prefix` varchar(10) NOT NULL COMMENT 'คำนำหน้าชื่อ',
+  `name` varchar(50) NOT NULL COMMENT 'ชื่อ-นามสกุล',
+  `idcard` int(13) NOT NULL COMMENT 'เลขบัตรปชช.',
+  `nationality` varchar(10) NOT NULL COMMENT 'เชื้อชาติ',
+  `nationality2` varchar(10) NOT NULL COMMENT 'สัญชาติ',
+  `address_idcard` varchar(50) NOT NULL COMMENT 'ที่อยู่ตามบัตรปชช.',
+  `brithday` date NOT NULL COMMENT 'วันเกิด',
+  `age` int(2) NOT NULL COMMENT 'อายุ',
+  `phone_number` int(10) NOT NULL COMMENT 'เบอร์',
+  `email` varchar(20) NOT NULL COMMENT 'อีเมล'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='ตารางข้อมูลผู้ใช้';
 
 -- --------------------------------------------------------
 
@@ -142,7 +133,7 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `username`, `password`, `title_name`, `first_name`, `last_name`, `email`, `phone_number`, `user_level`, `date_login`) VALUES
-(1, 'admin', '1234', 'นาย', 'เจ้าหน้าที่', 'เจ้าหน้าที่', 'q3.hahaha@gmail.com', '0899999999', 'แอดมิน', '2021-04-23 12:58:53'),
+(1, 'admin', '1234', 'นาย', 'เจ้าหน้าที่', 'เจ้าหน้าที่', 'q3.hahaha@gmail.com', '89564763', 'แอดมิน', '2021-07-31 06:58:31'),
 (2, 'manager', '1234', 'นาย', 'ผู้บริหาร', 'ผู้บริหาร', 'q3.hahaha@gmail.com', '0899999999', 'ผู้บริหาร', '2021-04-06 08:42:08'),
 (18, 'officer', '1234', 'นาย', 'นายนพเก้า', 'ถึงถาวร', 'noppakao.t@nsru.ac.th', '0644060454', 'เจ้าหน้าที่', '2021-04-23 12:59:06');
 
@@ -170,6 +161,12 @@ ALTER TABLE `people_rent`
   ADD KEY `id_data_build` (`id_data_build`);
 
 --
+-- Indexes for table `tenant`
+--
+ALTER TABLE `tenant`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `user`
 --
 ALTER TABLE `user`
@@ -189,13 +186,13 @@ ALTER TABLE `data_build`
 -- AUTO_INCREMENT for table `news`
 --
 ALTER TABLE `news`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
 
 --
 -- AUTO_INCREMENT for table `people_rent`
 --
 ALTER TABLE `people_rent`
-  MODIFY `id_rent` int(5) NOT NULL AUTO_INCREMENT COMMENT 'idตาราง', AUTO_INCREMENT=17;
+  MODIFY `id_rent` int(5) NOT NULL AUTO_INCREMENT COMMENT 'idตาราง', AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `user`
